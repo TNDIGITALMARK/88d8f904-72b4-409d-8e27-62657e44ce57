@@ -467,3 +467,217 @@ label {
   transform: translateY(0);
   box-shadow: var(--shadow-soft);
 }
+
+/* ============================================
+   GENEROUS SPACING & BREATHING ROOM SYSTEM
+   Inspired by Nordik's airy, spacious layout
+   ============================================ */
+
+/* Generous section spacing - much more vertical breathing room */
+.section-spacious {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+@media (max-width: 1023px) {
+  .section-spacious {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .section-spacious {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* Extra generous spacing for hero sections */
+.section-hero {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  min-height: 90vh;
+}
+
+@media (max-width: 1023px) {
+  .section-hero {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    min-height: auto;
+  }
+}
+
+/* ============================================
+   SCROLL-TRIGGERED ANIMATIONS
+   Smooth, elegant reveal effects
+   ============================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-fadeInLeft {
+  animation: fadeInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-fadeInRight {
+  animation: fadeInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Staggered animation delays for sequential reveals */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* Initial state for animated elements */
+[data-animate] {
+  opacity: 0;
+}
+
+/* ============================================
+   PARALLAX & SCROLL EFFECTS
+   Subtle depth and movement on scroll
+   ============================================ */
+
+.parallax-slow {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.parallax-medium {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   ENHANCED INTERACTIVE ELEMENTS
+   Richer hover states and micro-interactions
+   ============================================ */
+
+.interactive-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.interactive-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-luxe);
+}
+
+.interactive-image {
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.interactive-image img {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.interactive-image:hover img {
+  transform: scale(1.08);
+}
+
+/* Smooth reveal on image load */
+.image-reveal {
+  animation: scaleIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   CONTENT SPACING UTILITIES
+   For generous internal spacing within sections
+   ============================================ */
+
+.content-spacious > * + * {
+  margin-top: 3rem;
+}
+
+.content-comfortable > * + * {
+  margin-top: 2rem;
+}
+
+/* ============================================
+   SMOOTH SCROLL BEHAVIOR
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/* Disable for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
