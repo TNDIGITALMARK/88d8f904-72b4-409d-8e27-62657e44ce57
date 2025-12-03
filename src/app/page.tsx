@@ -30,54 +30,55 @@ export default function HomePage() {
     <>
       <Header />
       <main className="pt-[72px]">
-        {/* Hero Section - Enhanced Interactive */}
-        <section className="bg-gradient-to-br from-white via-gray-50 to-blue-50 py-16 md:py-24">
+        {/* Hero Section - Luxe and Elegant */}
+        <section className="gradient-luxe py-20 md:py-32">
           <div className="container mx-auto px-8">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
               {/* Hero Content */}
-              <div>
-                <div className="inline-block bg-[hsl(var(--jwc-navy))]/10 px-4 py-2 rounded-full text-sm font-medium text-[hsl(var(--jwc-navy))] mb-4">
-                  Windows › Hybrid Series › JWC8500
+              <div className="animate-fadeInUp">
+                <div className="inline-block bg-[hsl(var(--jwc-navy))]/10 px-5 py-2.5 rounded-full text-sm font-medium text-[hsl(var(--jwc-navy))] mb-6 backdrop-blur-sm">
+                  Premium Hybrid Collection
                 </div>
-                <h1 className="mb-4">JWC8500 Hybrid Windows</h1>
-                <p className="text-xl text-gray-700 mb-6">
-                  Vinyl interior with aluminum exterior cladding. Up to 22% better energy efficiency
-                  with 26% more glass area.
+                <h1 className="mb-6">Elegance Meets Innovation</h1>
+                <p className="text-xl text-gray-600 mb-8 text-elegant leading-relaxed">
+                  Experience the perfect harmony of refined aesthetics and exceptional performance.
+                  Our JWC8500 Hybrid Windows transform your living spaces with 26% more natural light
+                  and 22% superior energy efficiency.
                 </p>
-                <div className="grid grid-cols-3 gap-4 mb-8 bg-white p-6 rounded-lg shadow-md">
-                  <div>
-                    <div className="text-3xl font-bold text-[hsl(var(--jwc-navy))] mb-1">0.20</div>
-                    <div className="text-xs text-gray-600">U-Factor</div>
+                <div className="grid grid-cols-3 gap-6 mb-10 bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-[hsl(var(--jwc-silver))]">
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-[hsl(var(--jwc-navy))] mb-2 text-luxe">0.20</div>
+                    <div className="text-xs text-gray-500 uppercase tracking-wider font-medium">U-Factor</div>
                   </div>
-                  <div>
-                    <div className="text-3xl font-bold text-[hsl(var(--jwc-navy))] mb-1">35dB</div>
-                    <div className="text-xs text-gray-600">Noise Reduction</div>
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-[hsl(var(--jwc-navy))] mb-2 text-luxe">35dB</div>
+                    <div className="text-xs text-gray-500 uppercase tracking-wider font-medium">Quiet</div>
                   </div>
-                  <div>
-                    <div className="text-3xl font-bold text-[hsl(var(--jwc-navy))] mb-1">+22%</div>
-                    <div className="text-xs text-gray-600">Efficiency</div>
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-[hsl(var(--jwc-navy))] mb-2 text-luxe">+22%</div>
+                    <div className="text-xs text-gray-500 uppercase tracking-wider font-medium">Efficient</div>
                   </div>
                 </div>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-5">
                   <Link
                     href="/quote"
-                    className="bg-[hsl(var(--jwc-navy))] text-white px-8 py-4 rounded font-medium hover:bg-[hsl(var(--jwc-navy-dark))] transition-all hover:-translate-y-0.5 shadow-navy inline-flex items-center gap-2"
+                    className="bg-[hsl(var(--jwc-navy))] text-white px-10 py-5 rounded-xl font-medium hover:bg-[hsl(var(--jwc-navy-dark))] transition-all hover:-translate-y-1 shadow-navy inline-flex items-center gap-3 text-lg"
                   >
-                    Request Quote
-                    <ArrowRight size={18} />
+                    Explore Your Options
+                    <ArrowRight size={20} />
                   </Link>
                   <Link
                     href="/specifications"
-                    className="bg-white text-[hsl(var(--jwc-navy))] px-8 py-4 rounded font-medium border-2 border-[hsl(var(--jwc-navy))] hover:bg-[hsl(var(--jwc-navy))] hover:text-white transition-all"
+                    className="bg-white/90 backdrop-blur-sm text-[hsl(var(--jwc-navy))] px-10 py-5 rounded-xl font-medium border-2 border-[hsl(var(--jwc-navy))]/20 hover:border-[hsl(var(--jwc-navy))] hover:bg-white transition-all text-lg"
                   >
-                    View Specifications
+                    View Details
                   </Link>
                 </div>
               </div>
 
               {/* Hero Image with Hotspots */}
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center p-8">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-luxe hover-lift">
+                <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--jwc-pearl))] to-gray-100 flex items-center justify-center p-8">
                   <svg viewBox="0 0 600 450" className="w-full h-full">
                     <defs>
                       <linearGradient id="glassGradient" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -129,84 +130,81 @@ export default function HomePage() {
         </section>
 
         {/* Key Benefits - Visual Cards */}
-        <section className="py-16 bg-white">
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-8">
-            <h2 className="text-center mb-3">Why Choose JWC8500 Hybrid?</h2>
-            <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-              Combining the best of vinyl and aluminum technology for superior performance
+            <h2 className="text-center mb-4">Designed for Your Lifestyle</h2>
+            <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto text-elegant">
+              Experience the perfect balance of beauty, comfort, and sustainability in every detail
             </p>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-lg border border-blue-100">
-                <div className="w-14 h-14 bg-[hsl(var(--jwc-navy))] rounded-full flex items-center justify-center mb-4">
-                  <TrendingUp className="w-7 h-7 text-white" />
+            <div className="grid md:grid-cols-3 gap-10">
+              <div className="bg-gradient-to-br from-blue-50/50 to-white p-10 rounded-2xl border border-blue-100/50 hover-lift">
+                <div className="w-16 h-16 bg-[hsl(var(--jwc-navy))] rounded-2xl flex items-center justify-center mb-6 shadow-md">
+                  <TrendingUp className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">26% More Glass</h3>
-                <p className="text-gray-700 mb-4">
-                  Lower profile aluminum frame increases visible glass area for maximum natural light
-                  and unobstructed views.
+                <h3 className="text-2xl font-semibold mb-4">Expansive Views</h3>
+                <p className="text-gray-600 mb-5 text-elegant leading-relaxed">
+                  Embrace 26% more natural light with our refined frame design. Transform your spaces into bright, airy sanctuaries that connect you with the outdoors.
                 </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-[hsl(var(--jwc-navy))]" />
-                    Slimmer frame profiles
+                <ul className="space-y-3 text-sm text-gray-500">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 size={18} className="text-[hsl(var(--jwc-navy))]" />
+                    Elegant slim profiles
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-[hsl(var(--jwc-navy))]" />
-                    Enhanced curb appeal
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 size={18} className="text-[hsl(var(--jwc-navy))]" />
+                    Stunning aesthetics
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-[hsl(var(--jwc-navy))]" />
-                    Better views
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 size={18} className="text-[hsl(var(--jwc-navy))]" />
+                    Panoramic perspectives
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-green-50 to-white p-8 rounded-lg border border-green-100">
-                <div className="w-14 h-14 bg-[hsl(var(--jwc-navy))] rounded-full flex items-center justify-center mb-4">
-                  <Thermometer className="w-7 h-7 text-white" />
+              <div className="bg-gradient-to-br from-green-50/50 to-white p-10 rounded-2xl border border-green-100/50 hover-lift">
+                <div className="w-16 h-16 bg-[hsl(var(--jwc-navy))] rounded-2xl flex items-center justify-center mb-6 shadow-md">
+                  <Thermometer className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">22% Energy Savings</h3>
-                <p className="text-gray-700 mb-4">
-                  Advanced thermal break technology and premium glass packages exceed 2030 building
-                  code targets.
+                <h3 className="text-2xl font-semibold mb-4">Sustainable Comfort</h3>
+                <p className="text-gray-600 mb-5 text-elegant leading-relaxed">
+                  Enjoy 22% greater energy efficiency that keeps your home perfectly comfortable while reducing your environmental footprint and energy costs.
                 </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-[hsl(var(--jwc-navy))]" />
-                    Lower utility bills
+                <ul className="space-y-3 text-sm text-gray-500">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 size={18} className="text-[hsl(var(--jwc-navy))]" />
+                    Reduced energy costs
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-[hsl(var(--jwc-navy))]" />
-                    Rebate eligible
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 size={18} className="text-[hsl(var(--jwc-navy))]" />
+                    Eco-conscious living
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-[hsl(var(--jwc-navy))]" />
-                    Year-round comfort
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 size={18} className="text-[hsl(var(--jwc-navy))]" />
+                    Perfect year-round
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-50 to-white p-8 rounded-lg border border-purple-100">
-                <div className="w-14 h-14 bg-[hsl(var(--jwc-navy))] rounded-full flex items-center justify-center mb-4">
-                  <Shield className="w-7 h-7 text-white" />
+              <div className="bg-gradient-to-br from-purple-50/50 to-white p-10 rounded-2xl border border-purple-100/50 hover-lift">
+                <div className="w-16 h-16 bg-[hsl(var(--jwc-navy))] rounded-2xl flex items-center justify-center mb-6 shadow-md">
+                  <Shield className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Superior Durability</h3>
-                <p className="text-gray-700 mb-4">
-                  Aluminum exterior withstands harsh weather while vinyl interior never needs
-                  painting or maintenance.
+                <h3 className="text-2xl font-semibold mb-4">Lasting Beauty</h3>
+                <p className="text-gray-600 mb-5 text-elegant leading-relaxed">
+                  Premium materials and meticulous craftsmanship ensure your windows remain beautiful for decades with minimal care, protected by our comprehensive warranty.
                 </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-[hsl(var(--jwc-navy))]" />
-                    Weather resistant
+                <ul className="space-y-3 text-sm text-gray-500">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 size={18} className="text-[hsl(var(--jwc-navy))]" />
+                    Weather resilient
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-[hsl(var(--jwc-navy))]" />
-                    Low maintenance
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 size={18} className="text-[hsl(var(--jwc-navy))]" />
+                    Effortless upkeep
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-[hsl(var(--jwc-navy))]" />
-                    10-year warranty
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 size={18} className="text-[hsl(var(--jwc-navy))]" />
+                    Lifetime guarantee
                   </li>
                 </ul>
               </div>
@@ -215,37 +213,37 @@ export default function HomePage() {
         </section>
 
         {/* Window Styles Showcase */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-20 bg-pearl">
           <div className="container mx-auto px-8">
             <WindowStylesShowcase />
           </div>
         </section>
 
         {/* Interactive Customization Section */}
-        <section className="py-16 bg-white">
+        <section className="py-24 bg-white">
           <div className="container mx-auto px-8">
-            <div className="text-center mb-12">
-              <h2 className="mb-3">Design Your Perfect Window</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Customize colors, grilles, and glass technology to match your project requirements
+            <div className="text-center mb-16">
+              <h2 className="mb-5">Create Your Vision</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto text-elegant text-lg leading-relaxed">
+                Personalize every detail to reflect your unique style and complement your home's architecture
               </p>
             </div>
 
             {/* Tabs for Customization Options */}
             <div className="max-w-6xl mx-auto">
-              <div className="bg-white rounded-lg shadow-lg p-8">
+              <div className="bg-gradient-to-br from-white to-[hsl(var(--jwc-pearl))] rounded-2xl shadow-luxe p-12 border border-[hsl(var(--jwc-silver))]">
                 {/* Color Customization */}
-                <div className="mb-16">
+                <div className="mb-20">
                   <ColorSelector />
                 </div>
 
                 {/* Grille Pattern Selection */}
-                <div className="mb-16 pt-16 border-t">
+                <div className="mb-20 pt-20 border-t border-[hsl(var(--jwc-silver))]/30">
                   <GrillePatternSelector />
                 </div>
 
                 {/* Glass Technology Selection */}
-                <div className="pt-16 border-t">
+                <div className="pt-20 border-t border-[hsl(var(--jwc-silver))]/30">
                   <GlassTypeSelector />
                 </div>
               </div>
@@ -254,60 +252,60 @@ export default function HomePage() {
         </section>
 
         {/* Product Gallery */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-24 bg-pearl">
           <div className="container mx-auto px-8">
-            <h2 className="text-center mb-3">Installation Gallery</h2>
-            <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-              See the JWC8500 in real-world applications across residential and commercial projects
+            <h2 className="text-center mb-5">Inspired Living</h2>
+            <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto text-elegant text-lg leading-relaxed">
+              Discover how homeowners have transformed their spaces with the beauty and performance of JWC8500
             </p>
             <ProductGallery />
           </div>
         </section>
 
         {/* Technical Specifications Preview */}
-        <section className="py-16 bg-[hsl(var(--jwc-navy))] text-white">
+        <section className="py-24 bg-[hsl(var(--jwc-navy))] text-white">
           <div className="container mx-auto px-8">
-            <h2 className="text-center mb-2 text-white">Technical Performance</h2>
-            <p className="text-center text-white/80 mb-12 max-w-2xl mx-auto">
-              Engineered to exceed Canadian building code requirements
+            <h2 className="text-center mb-5 text-white">Excellence in Every Detail</h2>
+            <p className="text-center text-white/90 mb-16 max-w-2xl mx-auto text-elegant text-lg leading-relaxed">
+              Precision engineering meets uncompromising quality standards
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
               <div className="text-center">
-                <div className="text-5xl font-bold mb-3">0.20</div>
-                <div className="text-sm text-white/80 mb-2">U-Factor Rating</div>
-                <div className="text-xs text-white/60">Tri-pane configuration</div>
+                <div className="text-6xl font-bold mb-4 text-luxe">0.20</div>
+                <div className="text-sm text-white/90 mb-2 font-medium uppercase tracking-wider">U-Factor</div>
+                <div className="text-xs text-white/70 text-elegant">Superior insulation</div>
               </div>
               <div className="text-center">
-                <div className="text-5xl font-bold mb-3">35dB</div>
-                <div className="text-sm text-white/80 mb-2">Sound Reduction</div>
-                <div className="text-xs text-white/60">Tri-pane acoustic glass</div>
+                <div className="text-6xl font-bold mb-4 text-luxe">35dB</div>
+                <div className="text-sm text-white/90 mb-2 font-medium uppercase tracking-wider">Acoustics</div>
+                <div className="text-xs text-white/70 text-elegant">Peaceful serenity</div>
               </div>
               <div className="text-center">
-                <div className="text-5xl font-bold mb-3">Class 5</div>
-                <div className="text-sm text-white/80 mb-2">Wind Resistance</div>
-                <div className="text-xs text-white/60">Structural performance</div>
+                <div className="text-6xl font-bold mb-4 text-luxe">Class 5</div>
+                <div className="text-sm text-white/90 mb-2 font-medium uppercase tracking-wider">Protection</div>
+                <div className="text-xs text-white/70 text-elegant">Ultimate strength</div>
               </div>
               <div className="text-center">
-                <div className="text-5xl font-bold mb-3">ER 44</div>
-                <div className="text-sm text-white/80 mb-2">Energy Rating</div>
-                <div className="text-xs text-white/60">Exceeds 2030 targets</div>
+                <div className="text-6xl font-bold mb-4 text-luxe">ER 44</div>
+                <div className="text-sm text-white/90 mb-2 font-medium uppercase tracking-wider">Efficiency</div>
+                <div className="text-xs text-white/70 text-elegant">Future-ready</div>
               </div>
             </div>
-            <div className="text-center mt-12">
+            <div className="text-center">
               <Link
                 href="/specifications"
-                className="inline-block bg-white text-[hsl(var(--jwc-navy))] px-8 py-4 rounded-lg font-medium hover:bg-gray-100 transition-all"
+                className="inline-block bg-white text-[hsl(var(--jwc-navy))] px-12 py-5 rounded-xl font-medium hover:bg-white/95 transition-all hover:-translate-y-1 shadow-lg text-lg"
               >
-                View Complete Specifications
+                Explore Specifications
               </Link>
             </div>
           </div>
         </section>
 
         {/* Product Features Grid */}
-        <section className="py-16 bg-white">
+        <section className="py-24 bg-white">
           <div className="container mx-auto px-8">
-            <h2 className="text-center mb-12">Advanced Features</h2>
+            <h2 className="text-center mb-16">Sophisticated Features</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <SpecCard
                 icon={Shield}
@@ -427,29 +425,29 @@ export default function HomePage() {
         </section>
 
         {/* Final CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-[hsl(var(--jwc-navy))] to-[hsl(var(--jwc-navy-dark))] text-white">
+        <section className="py-28 bg-gradient-to-br from-[hsl(var(--jwc-navy))] to-[hsl(var(--jwc-navy-dark))] text-white">
           <div className="container mx-auto px-8 text-center">
-            <h2 className="mb-4 text-white">Ready to Upgrade Your Building?</h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Contact us today for a detailed quote and discover how the JWC8500 Hybrid can enhance
-              your project with superior performance and energy efficiency.
+            <h2 className="mb-6 text-white">Begin Your Transformation</h2>
+            <p className="text-xl text-white/95 mb-12 max-w-2xl mx-auto text-elegant leading-relaxed">
+              Let us help you bring your vision to life with windows that combine timeless elegance,
+              exceptional comfort, and sustainable performance.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-6 justify-center mb-12">
               <Link
                 href="/quote"
-                className="inline-block bg-white text-[hsl(var(--jwc-navy))] px-10 py-4 rounded-lg font-medium hover:bg-gray-100 transition-all text-lg shadow-lg"
+                className="inline-block bg-white text-[hsl(var(--jwc-navy))] px-12 py-5 rounded-xl font-medium hover:bg-white/95 transition-all hover:-translate-y-1 text-lg shadow-lg"
               >
-                Request Your Quote Now
+                Get Your Personalized Quote
               </Link>
               <Link
                 href="/specifications"
-                className="inline-block bg-transparent border-2 border-white text-white px-10 py-4 rounded-lg font-medium hover:bg-white/10 transition-all text-lg"
+                className="inline-block bg-transparent border-2 border-white/80 text-white px-12 py-5 rounded-xl font-medium hover:bg-white/10 hover:border-white transition-all text-lg"
               >
-                Download Specifications
+                View Full Specifications
               </Link>
             </div>
-            <p className="mt-8 text-sm text-white/70">
-              Questions? Call us at 1-800-JWC-8500 or email sales@jwc.com
+            <p className="text-sm text-white/80 text-elegant">
+              Questions? We're here to help at 1-800-JWC-8500 or sales@jwc.com
             </p>
           </div>
         </section>
