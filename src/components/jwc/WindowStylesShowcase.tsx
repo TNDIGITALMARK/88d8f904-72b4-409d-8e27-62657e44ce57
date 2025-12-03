@@ -99,29 +99,31 @@ const windowStyles: WindowStyle[] = [
 
 export function WindowStylesShowcase() {
   const [selectedStyle, setSelectedStyle] = useState(windowStyles[0])
+  const [hoveredHotspot, setHoveredHotspot] = useState<string | null>(null)
+  const [isWindowOpen, setIsWindowOpen] = useState(false)
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-12">
       {/* Style Selection Grid */}
       <div>
-        <h2 className="text-center mb-2">Available Window Styles</h2>
-        <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+        <h2 className="text-center mb-4">Available Window Styles</h2>
+        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto text-lg">
           Each style is engineered with the JWC8500 hybrid technology for superior performance
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
           {windowStyles.map((style) => (
             <button
               key={style.id}
               onClick={() => setSelectedStyle(style)}
-              className={`group relative bg-white border-2 rounded-lg p-4 transition-all hover:shadow-md ${
+              className={`group relative bg-white border-2 rounded-xl p-6 transition-all hover:shadow-lg hover:-translate-y-1 ${
                 selectedStyle.id === style.id
-                  ? 'border-[hsl(var(--jwc-navy))] shadow-lg'
+                  ? 'border-[hsl(var(--jwc-navy))] shadow-lg scale-105'
                   : 'border-gray-200'
               }`}
             >
               {/* Style Icon/Visual */}
-              <div className="aspect-square bg-gray-100 rounded mb-3 flex items-center justify-center overflow-hidden">
+              <div className="aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                 <div className="w-full h-full relative">
                   {/* Simple geometric representations */}
                   {style.id === 'casement' && (
@@ -175,10 +177,10 @@ export function WindowStylesShowcase() {
                 </div>
               </div>
 
-              <p className="font-medium text-sm text-center">{style.name}</p>
+              <p className="font-medium text-base text-center">{style.name}</p>
 
               {selectedStyle.id === style.id && (
-                <div className="absolute inset-0 border-2 border-[hsl(var(--jwc-navy))] rounded-lg pointer-events-none" />
+                <div className="absolute inset-0 border-2 border-[hsl(var(--jwc-navy))] rounded-xl pointer-events-none" />
               )}
             </button>
           ))}
@@ -186,20 +188,66 @@ export function WindowStylesShowcase() {
       </div>
 
       {/* Selected Style Details */}
-      <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+      <div className="bg-white rounded-2xl shadow-luxe overflow-hidden">
         <div className="grid md:grid-cols-2 gap-0">
-          {/* Image Side */}
-          <div className="relative aspect-[4/3] bg-gray-100">
+          {/* Interactive Window Render */}
+          <div className="relative aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100">
             <div className="absolute inset-0 flex items-center justify-center p-12">
-              <svg viewBox="0 0 400 300" className="w-full h-full">
+              <svg viewBox="0 0 400 300" className="w-full h-full cursor-pointer transition-transform hover:scale-105">
                 <rect x="0" y="0" width="400" height="300" fill="#f7fafc" />
                 {selectedStyle.id === 'casement' && (
                   <>
+                    {/* Outer Frame */}
                     <rect x="50" y="50" width="130" height="200" fill="none" stroke="#1a365d" strokeWidth="8" />
                     <rect x="220" y="50" width="130" height="200" fill="none" stroke="#1a365d" strokeWidth="8" />
-                    <rect x="60" y="60" width="110" height="180" fill="#e3f2fd" opacity="0.5" />
-                    <rect x="230" y="60" width="110" height="180" fill="#e3f2fd" opacity="0.5" />
-                    <circle cx="210" cy="150" r="8" fill="#1a365d" />
+
+                    {/* Glass Panes with gradient */}
+                    <rect x="60" y="60" width="110" height="180" fill="url(#glassGradient)" opacity="0.6" />
+                    <rect x="230" y="60" width="110" height="180" fill="url(#glassGradient)" opacity="0.6" />
+
+                    {/* Interactive Handle - Clickable */}
+                    <g
+                      className="cursor-pointer hover:opacity-80 transition-opacity"
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        setIsWindowOpen(!isWindowOpen)
+                      }}
+                      onMouseEnter={() => setHoveredHotspot('handle')}
+                      onMouseLeave={() => setHoveredHotspot(null)}
+                    >
+                      <circle cx="210" cy="150" r="10" fill="#1a365d" />
+                      <circle cx="210" cy="150" r="15" fill="none" stroke="#1a365d" strokeWidth="2" opacity="0.3" />
+                    </g>
+
+                    {/* Glass Dividers */}
+                    <line x1="115" y1="60" x2="115" y2="240" stroke="#1a365d" strokeWidth="2" opacity="0.3" />
+                    <line x1="285" y1="60" x2="285" y2="240" stroke="#1a365d" strokeWidth="2" opacity="0.3" />
+
+                    {/* Interactive Frame Hotspot */}
+                    <g
+                      className="cursor-pointer hover:opacity-80 transition-opacity"
+                      onMouseEnter={() => setHoveredHotspot('frame')}
+                      onMouseLeave={() => setHoveredHotspot(null)}
+                    >
+                      <circle cx="115" cy="80" r="8" fill="#1a365d" opacity="0.4" />
+                    </g>
+
+                    {/* Interactive Glass Hotspot */}
+                    <g
+                      className="cursor-pointer hover:opacity-80 transition-opacity"
+                      onMouseEnter={() => setHoveredHotspot('glass')}
+                      onMouseLeave={() => setHoveredHotspot(null)}
+                    >
+                      <circle cx="285" cy="150" r="8" fill="#4299e1" opacity="0.6" />
+                    </g>
+
+                    {/* Glass gradient definition */}
+                    <defs>
+                      <linearGradient id="glassGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#e3f2fd" stopOpacity="0.9" />
+                        <stop offset="100%" stopColor="#90caf9" stopOpacity="0.4" />
+                      </linearGradient>
+                    </defs>
                   </>
                 )}
                 {selectedStyle.id === 'awning' && (
@@ -263,30 +311,74 @@ export function WindowStylesShowcase() {
           </div>
 
           {/* Details Side */}
-          <div className="p-8">
-            <h3 className="text-2xl font-bold mb-3">{selectedStyle.name} Windows</h3>
-            <p className="text-gray-700 mb-6">{selectedStyle.description}</p>
+          <div className="p-10">
+            <h3 className="text-3xl font-bold mb-4">{selectedStyle.name} Windows</h3>
+            <p className="text-gray-700 mb-8 text-lg leading-relaxed">{selectedStyle.description}</p>
 
-            <h4 className="font-semibold mb-3">Key Features:</h4>
-            <ul className="space-y-2 mb-6">
+            <h4 className="font-semibold mb-4 text-lg">Key Features:</h4>
+            <ul className="space-y-3 mb-8">
               {selectedStyle.features.map((feature, idx) => (
-                <li key={idx} className="flex items-start gap-2">
-                  <span className="text-[hsl(var(--jwc-navy))] mt-1">•</span>
-                  <span className="text-gray-700">{feature}</span>
+                <li key={idx} className="flex items-start gap-3">
+                  <span className="text-[hsl(var(--jwc-navy))] text-xl mt-0.5">•</span>
+                  <span className="text-gray-700 text-base leading-relaxed">{feature}</span>
                 </li>
               ))}
             </ul>
 
-            <div className="bg-[hsl(var(--jwc-gray-light))] p-4 rounded-lg mb-6">
-              <p className="text-sm font-medium text-[hsl(var(--jwc-navy))] mb-1">Fun Fact</p>
-              <p className="text-sm text-gray-700">{selectedStyle.funFact}</p>
+            <div className="bg-blue-50/50 border border-blue-100 p-6 rounded-xl mb-8">
+              <p className="text-sm font-semibold text-[hsl(var(--jwc-navy))] mb-2 uppercase tracking-wider">Fun Fact</p>
+              <p className="text-base text-gray-700 leading-relaxed">{selectedStyle.funFact}</p>
             </div>
 
-            <button className="bg-[hsl(var(--jwc-navy))] text-white px-6 py-3 rounded font-medium hover:bg-[hsl(var(--jwc-navy-dark))] transition-all flex items-center gap-2">
+            {/* Interactive Status */}
+            {hoveredHotspot && (
+              <div className="bg-[hsl(var(--jwc-navy))]/5 border border-[hsl(var(--jwc-navy))]/20 p-4 rounded-xl mb-6 transition-all">
+                <p className="text-sm font-medium text-[hsl(var(--jwc-navy))]">
+                  {hoveredHotspot === 'handle' && '🔧 Click to open/close window'}
+                  {hoveredHotspot === 'frame' && '🏗️ Hybrid aluminum-vinyl frame construction'}
+                  {hoveredHotspot === 'glass' && '💎 Triple-pane insulated glass technology'}
+                </p>
+              </div>
+            )}
+
+            {isWindowOpen && (
+              <div className="bg-green-50 border border-green-200 p-4 rounded-xl mb-6">
+                <p className="text-sm font-medium text-green-800">✓ Window is now open - Maximum ventilation</p>
+              </div>
+            )}
+
+            <button className="w-full bg-[hsl(var(--jwc-navy))] text-white px-8 py-4 rounded-xl font-medium hover:bg-[hsl(var(--jwc-navy-dark))] transition-all hover:-translate-y-1 shadow-md flex items-center justify-center gap-3 text-lg">
               Get Quote for {selectedStyle.name}
-              <ArrowRight size={18} />
+              <ArrowRight size={20} />
             </button>
           </div>
+        </div>
+      </div>
+
+      {/* Interactive Hotspot Legend */}
+      <div className="grid md:grid-cols-3 gap-6 mt-12">
+        <div className="bg-white border-2 border-gray-200 p-6 rounded-xl text-center hover:border-[hsl(var(--jwc-navy))] transition-all">
+          <div className="w-12 h-12 bg-[hsl(var(--jwc-navy))]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span className="text-2xl">🔧</span>
+          </div>
+          <h5 className="font-semibold mb-2 text-lg">Interactive Handle</h5>
+          <p className="text-sm text-gray-600">Click the handle to open/close the window</p>
+        </div>
+
+        <div className="bg-white border-2 border-gray-200 p-6 rounded-xl text-center hover:border-[hsl(var(--jwc-navy))] transition-all">
+          <div className="w-12 h-12 bg-[hsl(var(--jwc-navy))]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span className="text-2xl">🏗️</span>
+          </div>
+          <h5 className="font-semibold mb-2 text-lg">Frame Detail</h5>
+          <p className="text-sm text-gray-600">Hover to learn about frame construction</p>
+        </div>
+
+        <div className="bg-white border-2 border-gray-200 p-6 rounded-xl text-center hover:border-[hsl(var(--jwc-navy))] transition-all">
+          <div className="w-12 h-12 bg-[hsl(var(--jwc-navy))]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span className="text-2xl">💎</span>
+          </div>
+          <h5 className="font-semibold mb-2 text-lg">Glass Technology</h5>
+          <p className="text-sm text-gray-600">Hover to discover glass specifications</p>
         </div>
       </div>
     </div>

@@ -56,18 +56,18 @@ export default function HomePage() {
                   Transform your living spaces with 26% more natural light and 22% superior energy efficiency.
                 </p>
 
-                <div className="grid grid-cols-3 gap-8 bg-white/90 backdrop-blur-sm p-10 rounded-3xl shadow-luxe border border-[hsl(var(--jwc-silver))]">
+                <div className="grid grid-cols-3 gap-12 bg-white/90 backdrop-blur-sm p-12 rounded-3xl shadow-luxe border border-[hsl(var(--jwc-silver))]">
                   <div className="text-center" data-animate>
-                    <div className="text-5xl font-bold text-[hsl(var(--jwc-navy))] mb-3 text-luxe">0.20</div>
-                    <div className="text-xs text-gray-500 uppercase tracking-wider font-medium">U-Factor</div>
+                    <div className="text-6xl font-bold text-[hsl(var(--jwc-navy))] mb-4 text-luxe">0.20</div>
+                    <div className="text-sm text-gray-600 uppercase tracking-wider font-semibold">U-Factor</div>
                   </div>
                   <div className="text-center delay-100" data-animate>
-                    <div className="text-5xl font-bold text-[hsl(var(--jwc-navy))] mb-3 text-luxe">35dB</div>
-                    <div className="text-xs text-gray-500 uppercase tracking-wider font-medium">Quiet</div>
+                    <div className="text-6xl font-bold text-[hsl(var(--jwc-navy))] mb-4 text-luxe">35dB</div>
+                    <div className="text-sm text-gray-600 uppercase tracking-wider font-semibold">Quiet</div>
                   </div>
                   <div className="text-center delay-200" data-animate>
-                    <div className="text-5xl font-bold text-[hsl(var(--jwc-navy))] mb-3 text-luxe">+22%</div>
-                    <div className="text-xs text-gray-500 uppercase tracking-wider font-medium">Efficient</div>
+                    <div className="text-6xl font-bold text-[hsl(var(--jwc-navy))] mb-4 text-luxe">+22%</div>
+                    <div className="text-sm text-gray-600 uppercase tracking-wider font-semibold">Efficient</div>
                   </div>
                 </div>
 
@@ -342,33 +342,33 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-16 mb-20">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-20 mb-24">
               <div className="text-center" data-animate>
-                <div className="text-7xl font-bold mb-6 text-luxe">0.20</div>
-                <div className="text-base text-white/90 mb-3 font-medium uppercase tracking-wider">U-Factor</div>
-                <div className="text-sm text-white/70 text-elegant">Superior insulation</div>
+                <div className="text-8xl font-bold mb-6 text-luxe leading-none">0.20</div>
+                <div className="text-lg text-white/90 mb-4 font-semibold uppercase tracking-wider">U-Factor</div>
+                <div className="text-base text-white/70 text-elegant">Superior insulation</div>
               </div>
               <div className="text-center delay-100" data-animate>
-                <div className="text-7xl font-bold mb-6 text-luxe">35dB</div>
-                <div className="text-base text-white/90 mb-3 font-medium uppercase tracking-wider">Acoustics</div>
-                <div className="text-sm text-white/70 text-elegant">Peaceful serenity</div>
+                <div className="text-8xl font-bold mb-6 text-luxe leading-none">35dB</div>
+                <div className="text-lg text-white/90 mb-4 font-semibold uppercase tracking-wider">Acoustics</div>
+                <div className="text-base text-white/70 text-elegant">Peaceful serenity</div>
               </div>
               <div className="text-center delay-200" data-animate>
-                <div className="text-7xl font-bold mb-6 text-luxe">Class 5</div>
-                <div className="text-base text-white/90 mb-3 font-medium uppercase tracking-wider">Protection</div>
-                <div className="text-sm text-white/70 text-elegant">Ultimate strength</div>
+                <div className="text-8xl font-bold mb-6 text-luxe leading-none">Class 5</div>
+                <div className="text-lg text-white/90 mb-4 font-semibold uppercase tracking-wider">Protection</div>
+                <div className="text-base text-white/70 text-elegant">Ultimate strength</div>
               </div>
               <div className="text-center delay-300" data-animate>
-                <div className="text-7xl font-bold mb-6 text-luxe">ER 44</div>
-                <div className="text-base text-white/90 mb-3 font-medium uppercase tracking-wider">Efficiency</div>
-                <div className="text-sm text-white/70 text-elegant">Future-ready</div>
+                <div className="text-8xl font-bold mb-6 text-luxe leading-none">ER 44</div>
+                <div className="text-lg text-white/90 mb-4 font-semibold uppercase tracking-wider">Efficiency</div>
+                <div className="text-base text-white/70 text-elegant">Future-ready</div>
               </div>
             </div>
 
             <div className="text-center" data-animate>
               <Link
                 href="/specifications"
-                className="inline-block bg-white text-[hsl(var(--jwc-navy))] px-14 py-6 rounded-xl font-medium hover:bg-white/95 transition-all hover:-translate-y-1 shadow-lg text-lg"
+                className="inline-block bg-white text-[hsl(var(--jwc-navy))] px-16 py-7 rounded-xl font-semibold hover:bg-white/95 transition-all hover:-translate-y-2 shadow-luxe text-xl"
               >
                 Explore Specifications
               </Link>
@@ -537,22 +537,22 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-8 justify-center mb-16" data-animate>
+            <div className="flex flex-wrap gap-10 justify-center mb-20" data-animate>
               <Link
                 href="/quote"
-                className="inline-block bg-white text-[hsl(var(--jwc-navy))] px-14 py-7 rounded-xl font-medium hover:bg-white/95 transition-all hover:-translate-y-2 text-xl shadow-luxe"
+                className="inline-block bg-white text-[hsl(var(--jwc-navy))] px-16 py-8 rounded-xl font-semibold hover:bg-white/95 transition-all hover:-translate-y-2 text-xl shadow-luxe hover:shadow-2xl"
               >
                 Get Your Personalized Quote
               </Link>
               <Link
                 href="/specifications"
-                className="inline-block bg-transparent border-2 border-white/80 text-white px-14 py-7 rounded-xl font-medium hover:bg-white/10 hover:border-white transition-all text-xl"
+                className="inline-block bg-transparent border-3 border-white/80 text-white px-16 py-8 rounded-xl font-semibold hover:bg-white/10 hover:border-white transition-all text-xl hover:-translate-y-2"
               >
                 View Full Specifications
               </Link>
             </div>
 
-            <p className="text-base text-white/80 text-elegant" data-animate>
+            <p className="text-lg text-white/80 text-elegant" data-animate>
               Questions? We're here to help at 1-800-JWC-8500 or sales@jwc.com
             </p>
           </div>
