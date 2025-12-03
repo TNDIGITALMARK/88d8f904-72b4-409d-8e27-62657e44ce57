@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Flora Boutique",
-  description: "Beautiful AI-powered website creation platform",
+  title: "JWC8500 Hybrid Windows | Premium Commercial Windows",
+  description: "Professional B2B window solutions. JWC8500 Hybrid Series featuring dual-pane insulated glass, reinforced aluminum frame, and superior energy efficiency. Request a quote today.",
 };
 
 export default function RootLayout({
