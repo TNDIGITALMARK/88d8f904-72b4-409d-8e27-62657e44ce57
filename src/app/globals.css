@@ -1,60 +1,67 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
 /* ============================================
-   JWC8500 HYBRID WINDOWS - DESIGN SYSTEM
-   B2B Professional Window Product Showcase
-   Brand Colors: Navy (#1a365d), Black (#000000), White (#ffffff)
+   JWC8500 HYBRID WINDOWS - LUXURY DESIGN SYSTEM
+   Premium Window Product Showcase - Sophisticated Elegance
+   Color Palette: Deep Navy, Gold Accents, Ivory, Rich Charcoal
    ============================================ */
 
 :root {
-  /* JWC Brand Colors - Navy, Black, White palette */
-  --background: 0 0% 100%;
-  --foreground: 0 0% 0%;
+  /* Luxury Color System - Deep, Rich, Sophisticated */
+  --background: 40 15% 98%;
+  --foreground: 220 20% 12%;
 
-  /* Card backgrounds - Pure white with black text */
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 0%;
+  /* Card backgrounds - Soft ivory with elegant shadow */
+  --card: 40 20% 99%;
+  --card-foreground: 220 20% 12%;
 
-  /* Popovers - White background */
-  --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 0%;
+  /* Popovers - Elevated surfaces */
+  --popover: 40 20% 99%;
+  --popover-foreground: 220 20% 12%;
 
-  /* Primary: Navy Blue (#1a365d) - Headers, buttons, accents */
-  --primary: 210 54% 23%;
-  --primary-foreground: 0 0% 100%;
+  /* Primary: Deep Midnight Navy - Sophisticated and powerful */
+  --primary: 220 40% 18%;
+  --primary-foreground: 40 20% 98%;
 
-  /* Secondary: Light gray for subtle backgrounds */
-  --secondary: 0 0% 96%;
-  --secondary-foreground: 0 0% 0%;
+  /* Secondary: Warm sand for subtle elegance */
+  --secondary: 40 15% 94%;
+  --secondary-foreground: 220 20% 12%;
 
-  /* Muted: Subtle gray backgrounds */
-  --muted: 0 0% 96%;
-  --muted-foreground: 0 0% 40%;
+  /* Muted: Soft warm grays */
+  --muted: 40 12% 92%;
+  --muted-foreground: 220 10% 45%;
 
-  /* Accent: Navy for interactive elements */
-  --accent: 210 54% 23%;
-  --accent-foreground: 0 0% 100%;
+  /* Accent: Rich gold for luxury touches */
+  --accent: 38 50% 55%;
+  --accent-foreground: 220 20% 12%;
 
-  /* Destructive: Professional red */
-  --destructive: 0 70% 50%;
-  --destructive-foreground: 0 0% 100%;
+  /* Destructive: Refined burgundy */
+  --destructive: 0 50% 45%;
+  --destructive-foreground: 40 20% 98%;
 
-  /* Borders: Subtle gray (#e0e0e0) */
-  --border: 0 0% 88%;
-  --input: 0 0% 88%;
-  --ring: 210 54% 23%;
+  /* Borders: Subtle warm gray */
+  --border: 40 10% 88%;
+  --input: 40 10% 88%;
+  --ring: 38 50% 55%;
 
-  /* Border radius - Professional, subtle */
-  --radius: 0.5rem;
+  /* Border radius - Refined and elegant */
+  --radius: 0.75rem;
 
-  /* JWC Navy accent colors */
-  --jwc-navy: 210 54% 23%;
-  --jwc-navy-dark: 210 54% 15%;
-  --jwc-black: 0 0% 0%;
-  --jwc-white: 0 0% 100%;
-  --jwc-gray-light: 0 0% 96%;
-  --jwc-gray-border: 0 0% 88%;
+  /* JWC Luxury Palette */
+  --jwc-navy: 220 40% 18%;
+  --jwc-navy-dark: 220 45% 12%;
+  --jwc-gold: 38 50% 55%;
+  --jwc-gold-light: 38 60% 70%;
+  --jwc-ivory: 40 20% 99%;
+  --jwc-charcoal: 220 20% 25%;
+  --jwc-sand: 40 15% 94%;
+  --jwc-border-elegant: 40 10% 85%;
+
+  /* Luxury Shadows */
+  --shadow-luxury: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-gold-glow: 0 4px 20px rgba(194, 156, 92, 0.3);
+  --shadow-elegant: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .dark {
@@ -169,156 +176,318 @@
   border-color: hsl(var(--border));
 }
 
-/* Base Typography - Inter font system */
+/* Luxury Typography System - Elegant & Sophisticated */
 html {
-  font-size: 16px;
+  font-size: 17px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: hsl(var(--background));
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, hsl(40 20% 98%) 0%, hsl(40 15% 96%) 100%);
   color: hsl(var(--foreground));
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 17px;
+  line-height: 1.7;
   font-weight: 400;
-  font-feature-settings: "rlig" 1, "calt" 1;
+  letter-spacing: 0.01em;
 }
 
-/* JWC Typography Scale - Professional B2B styling */
+/* Luxury Typography Scale - Elegant serif headings with refined sans-serif body */
 h1 {
-  font-size: 3rem;
-  line-height: 1.2;
-  font-weight: 700;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 3.75rem;
+  line-height: 1.15;
+  font-weight: 600;
   color: hsl(var(--jwc-navy));
-  letter-spacing: -0.02em;
-  margin-bottom: 1rem;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 h2 {
-  font-size: 2.25rem;
-  line-height: 1.3;
-  font-weight: 700;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.75rem;
+  line-height: 1.25;
+  font-weight: 600;
   color: hsl(var(--jwc-navy));
-  letter-spacing: -0.02em;
-  margin-bottom: 0.875rem;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.25rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 }
 
 h3 {
-  font-size: 1.75rem;
-  line-height: 1.4;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.875rem;
+  line-height: 1.35;
   font-weight: 600;
-  color: hsl(var(--foreground));
-  margin-bottom: 0.75rem;
+  color: hsl(var(--jwc-charcoal));
+  letter-spacing: -0.015em;
+  margin-bottom: 1rem;
 }
 
 h4 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
   line-height: 1.4;
   font-weight: 600;
-  color: hsl(var(--foreground));
-  margin-bottom: 0.75rem;
+  color: hsl(var(--jwc-charcoal));
+  letter-spacing: -0.01em;
+  margin-bottom: 0.875rem;
 }
 
 h5 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;
   line-height: 1.5;
   font-weight: 600;
   color: hsl(var(--foreground));
-  margin-bottom: 0.5rem;
+  letter-spacing: 0;
+  margin-bottom: 0.75rem;
 }
 
 h6 {
-  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.0625rem;
   line-height: 1.5;
   font-weight: 600;
   color: hsl(var(--foreground));
-  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.625rem;
 }
 
 p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+  color: hsl(var(--foreground) / 0.9);
 }
 
-/* Link styles */
+/* Luxury Link Styles - Gold accent on hover */
 a {
   color: hsl(var(--jwc-navy));
   font-weight: 500;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: hsl(var(--jwc-gold));
+  text-decoration: none;
 }
 
-/* Button defaults - Navy brand styling */
+a:not(.no-underline)::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, hsl(var(--jwc-gold)), hsl(var(--jwc-gold-light)));
+  transition: width 0.3s ease;
+}
+
+a:not(.no-underline):hover::after {
+  width: 100%;
+}
+
+/* Luxury Button Defaults - Elegant interactions */
 button {
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.025em;
 }
 
-/* Form element defaults */
+/* Refined Form Elements */
 input, select, textarea {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   color: hsl(var(--foreground));
+  background-color: hsl(var(--card));
+  border: 1.5px solid hsl(var(--border));
+  transition: all 0.3s ease;
 }
 
 input:focus, select:focus, textarea:focus {
   outline: none;
-  border-color: hsl(var(--jwc-navy));
-  box-shadow: 0 0 0 3px hsla(var(--jwc-navy) / 0.1);
+  border-color: hsl(var(--jwc-gold));
+  box-shadow: 0 0 0 4px hsla(var(--jwc-gold) / 0.12), var(--shadow-elegant);
+  transform: translateY(-1px);
 }
 
-/* JWC Professional Shadows */
+/* Luxury Shadow System - Elevated & Sophisticated */
 .shadow-sm {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04);
 }
 
 .shadow {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .shadow-md {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .shadow-lg {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12), 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* JWC Navy button shadow */
+.shadow-xl {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Luxury Accent Shadows */
 .shadow-navy {
-  box-shadow: 0 4px 12px rgba(26, 54, 93, 0.3);
+  box-shadow: 0 8px 32px rgba(31, 51, 77, 0.25), 0 4px 16px rgba(31, 51, 77, 0.15);
 }
 
-/* Responsive typography scaling */
+.shadow-gold {
+  box-shadow: 0 8px 32px rgba(194, 156, 92, 0.3), 0 4px 16px rgba(194, 156, 92, 0.2);
+}
+
+.shadow-elegant {
+  box-shadow: var(--shadow-elegant);
+}
+
+.shadow-luxury {
+  box-shadow: var(--shadow-luxury);
+}
+
+/* Luxury Hover Effects */
+.luxury-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.luxury-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Gold Accent Line */
+.gold-accent {
+  position: relative;
+}
+
+.gold-accent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, hsl(var(--jwc-gold)), hsl(var(--jwc-gold-light)));
+  border-radius: 2px;
+}
+
+/* Luxury Gradient Backgrounds */
+.gradient-luxury {
+  background: linear-gradient(135deg, hsl(var(--jwc-navy)) 0%, hsl(var(--jwc-navy-dark)) 100%);
+}
+
+.gradient-gold {
+  background: linear-gradient(135deg, hsl(var(--jwc-gold)) 0%, hsl(var(--jwc-gold-light)) 100%);
+}
+
+.gradient-elegant {
+  background: linear-gradient(135deg, hsl(40 20% 99%) 0%, hsl(40 15% 96%) 100%);
+}
+
+/* Premium Text Gradients */
+.text-gold-gradient {
+  background: linear-gradient(135deg, hsl(var(--jwc-gold)), hsl(var(--jwc-gold-light)));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Luxury Borders */
+.border-gold {
+  border-color: hsl(var(--jwc-gold)) !important;
+}
+
+.border-elegant {
+  border-color: hsl(var(--jwc-border-elegant));
+}
+
+/* Frosted Glass Effect */
+.glass-luxury {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Premium Animation */
+@keyframes luxury-shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(194, 156, 92, 0.15) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: luxury-shimmer 3s ease-in-out infinite;
+}
+
+/* Responsive typography scaling - Luxury adjustments */
 @media (max-width: 639px) {
   html {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    letter-spacing: -0.02em;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    letter-spacing: -0.02em;
   }
 
   h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
   html {
-    font-size: 15px;
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  h2 {
+    font-size: 3.25rem;
   }
 }
