@@ -1,73 +1,60 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 /* ============================================
-   JWC8500 HYBRID WINDOWS - LUXE DESIGN SYSTEM
-   Premium Consumer-Focused Window Experience
-   Elegant Typography · Refined Aesthetics · Sophisticated Design
+   JWC8500 HYBRID WINDOWS - DESIGN SYSTEM
+   B2B Professional Window Product Showcase
    Brand Colors: Navy (#1a365d), Black (#000000), White (#ffffff)
    ============================================ */
 
 :root {
-  /* Luxe Color Palette - Refined and Elegant */
+  /* JWC Brand Colors - Navy, Black, White palette */
   --background: 0 0% 100%;
-  --foreground: 0 0% 5%;
+  --foreground: 0 0% 0%;
 
-  /* Card backgrounds - Pristine white with sophisticated text */
+  /* Card backgrounds - Pure white with black text */
   --card: 0 0% 100%;
-  --card-foreground: 0 0% 5%;
+  --card-foreground: 0 0% 0%;
 
-  /* Popovers - Clean white background */
+  /* Popovers - White background */
   --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 5%;
+  --popover-foreground: 0 0% 0%;
 
-  /* Primary: Deep Navy Blue - Luxurious and commanding */
+  /* Primary: Navy Blue (#1a365d) - Headers, buttons, accents */
   --primary: 210 54% 23%;
   --primary-foreground: 0 0% 100%;
 
-  /* Secondary: Soft pearl gray for refined backgrounds */
-  --secondary: 0 0% 97%;
-  --secondary-foreground: 0 0% 5%;
+  /* Secondary: Light gray for subtle backgrounds */
+  --secondary: 0 0% 96%;
+  --secondary-foreground: 0 0% 0%;
 
-  /* Muted: Elegant whisper gray */
-  --muted: 0 0% 97%;
-  --muted-foreground: 0 0% 45%;
+  /* Muted: Subtle gray backgrounds */
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 40%;
 
-  /* Accent: Rich navy for premium interactions */
+  /* Accent: Navy for interactive elements */
   --accent: 210 54% 23%;
   --accent-foreground: 0 0% 100%;
 
-  /* Destructive: Refined crimson */
-  --destructive: 0 65% 48%;
+  /* Destructive: Professional red */
+  --destructive: 0 70% 50%;
   --destructive-foreground: 0 0% 100%;
 
-  /* Borders: Delicate silver tones */
-  --border: 0 0% 90%;
-  --input: 0 0% 90%;
+  /* Borders: Subtle gray (#e0e0e0) */
+  --border: 0 0% 88%;
+  --input: 0 0% 88%;
   --ring: 210 54% 23%;
 
-  /* Border radius - Elegant, refined curves */
-  --radius: 0.75rem;
+  /* Border radius - Professional, subtle */
+  --radius: 0.5rem;
 
-  /* JWC Luxe Accent Colors */
+  /* JWC Navy accent colors */
   --jwc-navy: 210 54% 23%;
   --jwc-navy-dark: 210 54% 15%;
-  --jwc-navy-light: 210 54% 35%;
-  --jwc-black: 0 0% 5%;
+  --jwc-black: 0 0% 0%;
   --jwc-white: 0 0% 100%;
-  --jwc-pearl: 0 0% 97%;
-  --jwc-silver: 0 0% 90%;
-
-  /* Typography System - Luxe Font Variables */
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-accent: 'Cormorant Garamond', Georgia, serif;
-
-  /* Refined Shadow System */
-  --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.06);
-  --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.08);
-  --shadow-luxe: 0 8px 32px rgba(0, 0, 0, 0.1);
-  --shadow-navy: 0 6px 24px rgba(26, 54, 93, 0.25);
+  --jwc-gray-light: 0 0% 96%;
+  --jwc-gray-border: 0 0% 88%;
 }
 
 .dark {
@@ -182,502 +169,156 @@
   border-color: hsl(var(--border));
 }
 
-/* Luxe Typography Foundation */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/* Base Typography - Inter font system */
 html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-body);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
   font-size: 16px;
-  line-height: 1.75;
+  line-height: 1.6;
   font-weight: 400;
-  letter-spacing: 0.01em;
-  font-feature-settings: "kern" 1, "liga" 1;
+  font-feature-settings: "rlig" 1, "calt" 1;
 }
 
-/* Luxe Typography Scale - Elegant Consumer Focus */
+/* JWC Typography Scale - Professional B2B styling */
 h1 {
-  font-family: var(--font-display);
-  font-size: 3.5rem;
-  line-height: 1.15;
-  font-weight: 600;
-  color: hsl(var(--jwc-navy));
-  letter-spacing: -0.03em;
-  margin-bottom: 1.5rem;
-}
-
-h2 {
-  font-family: var(--font-display);
-  font-size: 2.75rem;
-  line-height: 1.25;
-  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 700;
   color: hsl(var(--jwc-navy));
   letter-spacing: -0.02em;
-  margin-bottom: 1.25rem;
-}
-
-h3 {
-  font-family: var(--font-display);
-  font-size: 2rem;
-  line-height: 1.3;
-  font-weight: 600;
-  color: hsl(var(--foreground));
-  letter-spacing: -0.01em;
   margin-bottom: 1rem;
 }
 
-h4 {
-  font-family: var(--font-body);
-  font-size: 1.5rem;
-  line-height: 1.4;
-  font-weight: 600;
-  color: hsl(var(--foreground));
+h2 {
+  font-size: 2.25rem;
+  line-height: 1.3;
+  font-weight: 700;
+  color: hsl(var(--jwc-navy));
+  letter-spacing: -0.02em;
   margin-bottom: 0.875rem;
 }
 
-h5 {
-  font-family: var(--font-body);
-  font-size: 1.25rem;
-  line-height: 1.5;
+h3 {
+  font-size: 1.75rem;
+  line-height: 1.4;
   font-weight: 600;
   color: hsl(var(--foreground));
   margin-bottom: 0.75rem;
 }
 
+h4 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.75rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
+}
+
 h6 {
-  font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 600;
   color: hsl(var(--foreground));
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
 
 p {
-  font-family: var(--font-body);
-  margin-bottom: 1.25rem;
-  line-height: 1.75;
-  font-weight: 400;
-  letter-spacing: 0.01em;
+  margin-bottom: 1rem;
+  line-height: 1.6;
 }
 
-/* Refined Link Styles */
+/* Link styles */
 a {
   color: hsl(var(--jwc-navy));
   font-weight: 500;
   text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
+  transition: all 0.2s ease;
 }
 
 a:hover {
-  color: hsl(var(--jwc-navy-light));
-  text-decoration: none;
+  text-decoration: underline;
 }
 
-/* Luxe Button Defaults */
+/* Button defaults - Navy brand styling */
 button {
-  font-family: var(--font-body);
+  font-family: 'Inter', sans-serif;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  letter-spacing: 0.03em;
+  transition: all 0.2s ease;
 }
 
-button:hover {
-  transform: translateY(-1px);
-}
-
-/* Elegant Form Elements */
+/* Form element defaults */
 input, select, textarea {
-  font-family: var(--font-body);
+  font-family: 'Inter', sans-serif;
   font-size: 1rem;
   color: hsl(var(--foreground));
-  border-radius: var(--radius);
-  transition: all 0.3s ease;
 }
 
 input:focus, select:focus, textarea:focus {
   outline: none;
   border-color: hsl(var(--jwc-navy));
-  box-shadow: 0 0 0 4px hsla(var(--jwc-navy) / 0.08);
-  transform: translateY(-1px);
+  box-shadow: 0 0 0 3px hsla(var(--jwc-navy) / 0.1);
 }
 
-label {
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 0.875rem;
-  letter-spacing: 0.02em;
-  color: hsl(var(--foreground));
-}
-
-/* Luxe Shadow System - Soft and Sophisticated */
+/* JWC Professional Shadows */
 .shadow-sm {
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .shadow {
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .shadow-md {
-  box-shadow: var(--shadow-medium);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
 }
 
 .shadow-lg {
-  box-shadow: var(--shadow-luxe);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* Premium Navy Shadow */
+/* JWC Navy button shadow */
 .shadow-navy {
-  box-shadow: var(--shadow-navy);
+  box-shadow: 0 4px 12px rgba(26, 54, 93, 0.3);
 }
 
-/* Elegant Hover Effects */
-.hover-lift {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hover-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-luxe);
-}
-
-/* Refined Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fadeInUp {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-/* Responsive Typography - Luxe Scaling */
+/* Responsive typography scaling */
 @media (max-width: 639px) {
   html {
     font-size: 14px;
   }
 
   h1 {
-    font-size: 2.25rem;
-    line-height: 1.2;
-    margin-bottom: 1rem;
+    font-size: 2rem;
   }
 
   h2 {
-    font-size: 1.875rem;
-    line-height: 1.3;
-    margin-bottom: 0.875rem;
+    font-size: 1.5rem;
   }
 
   h3 {
-    font-size: 1.5rem;
-    line-height: 1.35;
-    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
   }
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
   html {
     font-size: 15px;
-  }
-
-  h1 {
-    font-size: 3rem;
-  }
-
-  h2 {
-    font-size: 2.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-}
-
-/* Utility Classes - Luxe Additions */
-.text-luxe {
-  font-family: var(--font-display);
-  font-weight: 500;
-  letter-spacing: -0.02em;
-}
-
-.text-elegant {
-  font-family: var(--font-body);
-  font-weight: 300;
-  letter-spacing: 0.02em;
-  line-height: 1.8;
-}
-
-.bg-pearl {
-  background-color: hsl(var(--jwc-pearl));
-}
-
-.border-silver {
-  border-color: hsl(var(--jwc-silver));
-}
-
-.gradient-luxe {
-  background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--jwc-pearl)) 100%);
-}
-
-/* Premium Interactive States */
-.btn-luxe {
-  font-family: var(--font-body);
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  padding: 1rem 2rem;
-  border-radius: var(--radius);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: var(--shadow-soft);
-}
-
-.btn-luxe:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-medium);
-}
-
-.btn-luxe:active {
-  transform: translateY(0);
-  box-shadow: var(--shadow-soft);
-}
-
-/* ============================================
-   GENEROUS SPACING & BREATHING ROOM SYSTEM
-   Inspired by Nordik's airy, spacious layout
-   ============================================ */
-
-/* Generous section spacing - much more vertical breathing room */
-.section-spacious {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
-
-@media (max-width: 1023px) {
-  .section-spacious {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-}
-
-@media (max-width: 639px) {
-  .section-spacious {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-}
-
-/* Extra generous spacing for hero sections */
-.section-hero {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-  min-height: 90vh;
-}
-
-@media (max-width: 1023px) {
-  .section-hero {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-    min-height: auto;
-  }
-}
-
-/* ============================================
-   SCROLL-TRIGGERED ANIMATIONS
-   Smooth, elegant reveal effects
-   ============================================ */
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-.animate-fadeInUp {
-  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-.animate-fadeInLeft {
-  animation: fadeInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-.animate-fadeInRight {
-  animation: fadeInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-.animate-scaleIn {
-  animation: scaleIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-/* Staggered animation delays for sequential reveals */
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-400 { animation-delay: 0.4s; }
-.delay-500 { animation-delay: 0.5s; }
-
-/* Initial state for animated elements */
-[data-animate] {
-  opacity: 0;
-}
-
-/* ============================================
-   PARALLAX & SCROLL EFFECTS
-   Subtle depth and movement on scroll
-   ============================================ */
-
-.parallax-slow {
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.parallax-medium {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* ============================================
-   ENHANCED INTERACTIVE ELEMENTS
-   Richer hover states and micro-interactions
-   ============================================ */
-
-.interactive-card {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-}
-
-.interactive-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: var(--shadow-luxe);
-}
-
-.interactive-image {
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
-}
-
-.interactive-image img {
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.interactive-image:hover img {
-  transform: scale(1.08);
-}
-
-/* Smooth reveal on image load */
-.image-reveal {
-  animation: scaleIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* ============================================
-   CONTENT SPACING UTILITIES
-   For generous internal spacing within sections
-   ============================================ */
-
-.content-spacious > * + * {
-  margin-top: 3rem;
-}
-
-.content-comfortable > * + * {
-  margin-top: 2rem;
-}
-
-/* ============================================
-   SMOOTH SCROLL BEHAVIOR
-   ============================================ */
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
-}
-
-/* Disable for users who prefer reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
   }
 }
