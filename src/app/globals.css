@@ -2,104 +2,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
 /* ============================================
-   JWC8500 HYBRID WINDOWS - MODERN PROFESSIONAL DESIGN SYSTEM
-   Premium Window Product Showcase - Contemporary Elegance
-   Color Palette: Slate Blue, Teal Accents, Clean Whites, Professional Grays
+   NAVY, WHITE & BLACK DESIGN SYSTEM
+   Premium Professional Showcase - Bold Sophistication
+   Color Palette: Navy Blue, Pure White, Deep Black
    ============================================ */
 
 :root {
-  /* Modern Refined Color System - Contemporary Elegance with Better Contrast */
-  --background: 210 20% 98%;
-  --foreground: 215 25% 15%;
+  /* Navy, White & Black Color System */
+  --background: 0 0% 100%;
+  --foreground: 0 0% 0%;
 
-  /* Card backgrounds - Clean, crisp white */
+  /* Card backgrounds - Pure white */
   --card: 0 0% 100%;
-  --card-foreground: 215 25% 15%;
+  --card-foreground: 0 0% 0%;
 
-  /* Popovers - Elevated surfaces */
+  /* Popovers - Pure white surfaces */
   --popover: 0 0% 100%;
-  --popover-foreground: 215 25% 15%;
+  --popover-foreground: 0 0% 0%;
 
-  /* Primary: Deep Slate Blue - Modern and trustworthy */
-  --primary: 215 55% 35%;
+  /* Primary: Deep Navy Blue */
+  --primary: 215 100% 20%;
   --primary-foreground: 0 0% 100%;
 
-  /* Secondary: Soft blue-gray for subtlety */
-  --secondary: 210 15% 92%;
-  --secondary-foreground: 215 25% 15%;
+  /* Secondary: Light gray for subtle backgrounds */
+  --secondary: 0 0% 96%;
+  --secondary-foreground: 0 0% 0%;
 
-  /* Muted: Cool neutral grays */
-  --muted: 210 12% 94%;
-  --muted-foreground: 215 12% 45%;
+  /* Muted: Light neutrals */
+  --muted: 0 0% 95%;
+  --muted-foreground: 0 0% 40%;
 
-  /* Accent: Vibrant teal for modern highlights */
-  --accent: 185 70% 45%;
+  /* Accent: Navy for highlights */
+  --accent: 215 100% 25%;
   --accent-foreground: 0 0% 100%;
 
-  /* Destructive: Clear warning red */
+  /* Destructive: Pure red warning */
   --destructive: 0 72% 51%;
   --destructive-foreground: 0 0% 100%;
 
-  /* Borders: Clean neutral borders */
-  --border: 210 12% 88%;
-  --input: 210 12% 88%;
-  --ring: 185 70% 45%;
+  /* Borders: Subtle gray borders */
+  --border: 0 0% 88%;
+  --input: 0 0% 88%;
+  --ring: 215 100% 25%;
 
-  /* Border radius - Modern and clean */
-  --radius: 0.75rem;
+  /* Border radius - Clean and modern */
+  --radius: 0.5rem;
 
-  /* JWC Modern Professional Palette */
-  --jwc-navy: 215 55% 35%;
-  --jwc-navy-dark: 215 65% 25%;
-  --jwc-gold: 185 70% 45%;
-  --jwc-gold-light: 185 60% 60%;
-  --jwc-ivory: 0 0% 100%;
-  --jwc-charcoal: 215 20% 30%;
-  --jwc-sand: 210 15% 95%;
-  --jwc-border-elegant: 210 12% 90%;
+  /* Brand Palette - Navy, White, Black */
+  --jwc-navy: 215 100% 20%;
+  --jwc-navy-dark: 215 100% 15%;
+  --jwc-white: 0 0% 100%;
+  --jwc-black: 0 0% 0%;
+  --jwc-gray-light: 0 0% 95%;
+  --jwc-gray: 0 0% 50%;
+  --jwc-border: 0 0% 85%;
 
-  /* Modern Clean Shadows - Professional and subtle */
-  --shadow-luxury: 0 10px 40px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.03);
-  --shadow-gold-glow: 0 6px 24px rgba(20, 184, 166, 0.2);
-  --shadow-elegant: 0 6px 24px rgba(0, 0, 0, 0.05);
+  /* Clean Shadows - Professional and minimal */
+  --shadow-luxury: 0 10px 40px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
+  --shadow-navy: 0 10px 40px rgba(0, 20, 51, 0.15), 0 4px 12px rgba(0, 20, 51, 0.08);
+  --shadow-elegant: 0 6px 24px rgba(0, 0, 0, 0.06);
 }
 
 .dark {
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
+  --background: 0 0% 10%;
+  --foreground: 0 0% 100%;
 
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
+  --card: 0 0% 12%;
+  --card-foreground: 0 0% 100%;
 
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
+  --popover: 0 0% 10%;
+  --popover-foreground: 0 0% 100%;
 
-  --primary: 210 40% 98%;
-  --primary-foreground: 222.2 47.4% 11.2%;
+  --primary: 215 100% 25%;
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
+  --secondary: 0 0% 15%;
+  --secondary-foreground: 0 0% 100%;
 
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
+  --muted: 0 0% 18%;
+  --muted-foreground: 0 0% 65%;
 
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
+  --accent: 215 100% 30%;
+  --accent-foreground: 0 0% 100%;
 
   --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
+  --destructive-foreground: 0 0% 100%;
 
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 212.7 26.8% 83.9%;
-  --sidebar-background: 240 5.9% 10%;
-  --sidebar-foreground: 240 4.8% 95.9%;
-  --sidebar-primary: 224.3 76.3% 48%;
+  --border: 0 0% 20%;
+  --input: 0 0% 20%;
+  --ring: 215 100% 30%;
+  --sidebar-background: 0 0% 8%;
+  --sidebar-foreground: 0 0% 95%;
+  --sidebar-primary: 215 100% 25%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 240 3.7% 15.9%;
-  --sidebar-accent-foreground: 240 4.8% 95.9%;
-  --sidebar-border: 240 3.7% 15.9%;
-  --sidebar-ring: 217.2 91.2% 59.8%;
+  --sidebar-accent: 0 0% 15%;
+  --sidebar-accent-foreground: 0 0% 95%;
+  --sidebar-border: 0 0% 18%;
+  --sidebar-ring: 215 100% 30%;
 }
 
 @theme {
@@ -187,7 +186,7 @@ html {
 
 body {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: linear-gradient(165deg, hsl(210 20% 98%) 0%, hsl(210 18% 96%) 50%, hsl(215 20% 94%) 100%);
+  background: hsl(var(--background));
   color: hsl(var(--foreground));
   font-size: 17px;
   line-height: 1.75;
@@ -195,7 +194,7 @@ body {
   letter-spacing: 0.008em;
 }
 
-/* Luxury Typography Scale - Elegant serif headings with refined sans-serif body */
+/* Typography Scale - Bold and Professional */
 h1 {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 3.75rem;
@@ -204,7 +203,6 @@ h1 {
   color: hsl(var(--jwc-navy));
   letter-spacing: -0.03em;
   margin-bottom: 1.5rem;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 h2 {
@@ -215,7 +213,6 @@ h2 {
   color: hsl(var(--jwc-navy));
   letter-spacing: -0.025em;
   margin-bottom: 1.25rem;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 }
 
 h3 {
@@ -223,7 +220,7 @@ h3 {
   font-size: 1.875rem;
   line-height: 1.35;
   font-weight: 600;
-  color: hsl(var(--jwc-charcoal));
+  color: hsl(var(--jwc-black));
   letter-spacing: -0.015em;
   margin-bottom: 1rem;
 }
@@ -233,7 +230,7 @@ h4 {
   font-size: 1.5rem;
   line-height: 1.4;
   font-weight: 600;
-  color: hsl(var(--jwc-charcoal));
+  color: hsl(var(--jwc-black));
   letter-spacing: -0.01em;
   margin-bottom: 0.875rem;
 }
@@ -265,7 +262,7 @@ p {
   color: hsl(var(--foreground) / 0.9);
 }
 
-/* Luxury Link Styles - Gold accent on hover */
+/* Link Styles - Navy on hover */
 a {
   color: hsl(var(--jwc-navy));
   font-weight: 500;
@@ -275,7 +272,7 @@ a {
 }
 
 a:hover {
-  color: hsl(var(--jwc-gold));
+  color: hsl(var(--jwc-navy-dark));
   text-decoration: none;
 }
 
@@ -286,7 +283,7 @@ a:not(.no-underline)::after {
   left: 0;
   width: 0;
   height: 1px;
-  background: linear-gradient(90deg, hsl(var(--jwc-gold)), hsl(var(--jwc-gold-light)));
+  background: hsl(var(--jwc-navy));
   transition: width 0.3s ease;
 }
 
@@ -315,8 +312,8 @@ input, select, textarea {
 
 input:focus, select:focus, textarea:focus {
   outline: none;
-  border-color: hsl(var(--jwc-gold));
-  box-shadow: 0 0 0 4px hsla(var(--jwc-gold) / 0.12), var(--shadow-elegant);
+  border-color: hsl(var(--jwc-navy));
+  box-shadow: 0 0 0 4px hsla(var(--jwc-navy) / 0.12), var(--shadow-elegant);
   transform: translateY(-1px);
 }
 
@@ -341,13 +338,9 @@ input:focus, select:focus, textarea:focus {
   box-shadow: 0 20px 65px rgba(0, 0, 0, 0.11), 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
-/* Modern Professional Accent Shadows */
+/* Professional Navy Shadows */
 .shadow-navy {
-  box-shadow: 0 10px 40px rgba(41, 98, 149, 0.16), 0 4px 14px rgba(41, 98, 149, 0.08);
-}
-
-.shadow-gold {
-  box-shadow: 0 10px 40px rgba(20, 184, 166, 0.18), 0 4px 14px rgba(20, 184, 166, 0.12);
+  box-shadow: var(--shadow-navy);
 }
 
 .shadow-elegant {
@@ -358,7 +351,7 @@ input:focus, select:focus, textarea:focus {
   box-shadow: var(--shadow-luxury);
 }
 
-/* Modern Luxury Hover Effects - Smoother, More Refined */
+/* Hover Effects - Professional and Clean */
 .luxury-hover {
   transition: all 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
@@ -368,50 +361,38 @@ input:focus, select:focus, textarea:focus {
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.12), 0 10px 28px rgba(0, 0, 0, 0.08);
 }
 
-/* Gold Accent Line */
-.gold-accent {
+/* Navy Accent Line */
+.navy-accent {
   position: relative;
 }
 
-.gold-accent::before {
+.navy-accent::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, hsl(var(--jwc-gold)), hsl(var(--jwc-gold-light)));
+  background: hsl(var(--jwc-navy));
   border-radius: 2px;
 }
 
-/* Modern Professional Gradient Backgrounds */
+/* Gradient Backgrounds */
 .gradient-luxury {
   background: linear-gradient(135deg, hsl(var(--jwc-navy)) 0%, hsl(var(--jwc-navy-dark)) 100%);
 }
 
-.gradient-gold {
-  background: linear-gradient(135deg, hsl(var(--jwc-gold)) 0%, hsl(var(--jwc-gold-light)) 100%);
-}
-
 .gradient-elegant {
-  background: linear-gradient(135deg, hsl(210 20% 99%) 0%, hsl(210 15% 96%) 100%);
+  background: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
 }
 
-/* Premium Text Gradients */
-.text-gold-gradient {
-  background: linear-gradient(135deg, hsl(var(--jwc-gold)), hsl(var(--jwc-gold-light)));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Luxury Borders */
-.border-gold {
-  border-color: hsl(var(--jwc-gold)) !important;
+/* Navy Borders */
+.border-navy {
+  border-color: hsl(var(--jwc-navy)) !important;
 }
 
 .border-elegant {
-  border-color: hsl(var(--jwc-border-elegant));
+  border-color: hsl(var(--jwc-border));
 }
 
 /* Modern Frosted Glass Effect */
@@ -422,7 +403,7 @@ input:focus, select:focus, textarea:focus {
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-/* Premium Animation */
+/* Shimmer Animation */
 @keyframes luxury-shimmer {
   0% {
     background-position: -100% 0;
@@ -436,7 +417,7 @@ input:focus, select:focus, textarea:focus {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(20, 184, 166, 0.15) 50%,
+    rgba(0, 20, 51, 0.15) 50%,
     transparent 100%
   );
   background-size: 200% 100%;
