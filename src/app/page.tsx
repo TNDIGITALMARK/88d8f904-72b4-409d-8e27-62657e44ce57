@@ -54,10 +54,10 @@ export default function HomePage() {
 
       <Header />
       <main className="pt-[72px]">
-        {/* Hero Section - Modern Luxurious & Elegant */}
+        {/* Hero Section - Modern Professional & Clean */}
         <section className="relative overflow-hidden py-24 md:py-36">
-          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--jwc-ivory))] via-white to-[hsl(var(--jwc-sand))]"></div>
-          <div className="absolute inset-0 opacity-[0.04]">
+          <div className="absolute inset-0 bg-gradient-to-br from-white via-[hsl(var(--jwc-sand))] to-[hsl(var(--jwc-ivory))]"></div>
+          <div className="absolute inset-0 opacity-[0.05]">
             <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-[hsl(var(--jwc-gold))] blur-[140px] rounded-full"></div>
             <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[hsl(var(--jwc-navy))] blur-[120px] rounded-full"></div>
           </div>
@@ -175,8 +175,8 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Key Benefits - Modern Luxury Visual Cards */}
-        <section className="py-28 bg-gradient-to-b from-white via-[hsl(var(--jwc-ivory))] to-[hsl(var(--jwc-sand))]">
+        {/* Key Benefits - Modern Professional Visual Cards */}
+        <section className="py-28 bg-gradient-to-b from-white via-[hsl(var(--jwc-sand))] to-[hsl(var(--jwc-ivory))]">
           <div className="container mx-auto px-8">
             <div className="text-center mb-20 space-y-5">
               <div className="inline-block">
@@ -431,9 +431,9 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Interactive Customization Section - Modern Luxury Edition */}
-        <section className="py-28 bg-gradient-to-b from-[hsl(var(--jwc-sand))] via-[hsl(var(--jwc-ivory))] to-white relative overflow-hidden">
-          <div className="absolute inset-0 opacity-[0.03]">
+        {/* Interactive Customization Section - Modern Professional Edition */}
+        <section className="py-28 bg-gradient-to-b from-[hsl(var(--jwc-sand))] via-white to-[hsl(var(--jwc-ivory))] relative overflow-hidden">
+          <div className="absolute inset-0 opacity-[0.04]">
             <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-[hsl(var(--jwc-gold))] blur-[120px] rounded-full"></div>
           </div>
           <div className="container mx-auto px-8 relative z-10">
@@ -482,9 +482,9 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Technical Specifications Preview - Modern Luxury Dark Section */}
+        {/* Technical Specifications Preview - Modern Professional Dark Section */}
         <section className="py-28 bg-gradient-to-br from-[hsl(var(--jwc-navy))] via-[hsl(var(--jwc-navy-dark))] to-[hsl(var(--jwc-navy))] text-white relative overflow-hidden">
-          <div className="absolute inset-0 opacity-[0.08]">
+          <div className="absolute inset-0 opacity-[0.10]">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[hsl(var(--jwc-gold))] blur-[160px] rounded-full"></div>
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-white blur-[140px] rounded-full"></div>
           </div>
@@ -662,9 +662,9 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Final CTA Section - Modern Luxury Conversion */}
-        <section className="py-32 bg-gradient-to-br from-[hsl(var(--jwc-navy))] via-[hsl(var(--jwc-navy-dark))] to-black text-white relative overflow-hidden">
-          <div className="absolute inset-0 opacity-[0.15]">
+        {/* Final CTA Section - Modern Professional Conversion */}
+        <section className="py-32 bg-gradient-to-br from-[hsl(var(--jwc-navy))] via-[hsl(var(--jwc-navy-dark))] to-[hsl(215_70%_20%)] text-white relative overflow-hidden">
+          <div className="absolute inset-0 opacity-[0.18]">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-[hsl(var(--jwc-gold))] blur-[220px] rounded-full animate-pulse"></div>
           </div>
           <div className="absolute inset-0">
