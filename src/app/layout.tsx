@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "JWC8500 Hybrid Windows | Premium Commercial Windows",
-  description: "Professional B2B window solutions. JWC8500 Hybrid Series featuring dual-pane insulated glass, reinforced aluminum frame, and superior energy efficiency. Request a quote today.",
+  title: "JWC8500 Hybrid Windows | Transform Your Home with Natural Light",
+  description: "Elevate your lifestyle with JWC8500 Hybrid Windows. Experience 26% more natural light, 22% energy savings, and peaceful comfort in every season. Beautiful, durable, effortless.",
 };
 
 export default function RootLayout({

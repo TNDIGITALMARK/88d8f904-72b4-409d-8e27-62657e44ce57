@@ -52,12 +52,13 @@ export default function HomePage() {
                   </span>
                 </div>
                 <h1 className="mb-0">
-                  JWC8500 Hybrid Windows
+                  Transform Your Living Space
                 </h1>
                 <div className="w-20 h-1 bg-gradient-to-r from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] rounded-full"></div>
                 <p className="text-xl leading-relaxed text-[hsl(var(--foreground))]/80">
-                  Experience the pinnacle of window engineering. Vinyl interior elegance meets aluminum
-                  exterior resilience, delivering 22% superior energy efficiency with 26% expanded glass area.
+                  Discover windows that elevate your everyday moments. The JWC8500 Hybrid seamlessly blends
+                  timeless aesthetics with intelligent design, bringing 26% more natural light into your home
+                  while reducing energy costs by 22%. Live better, naturally.
                 </p>
                 <div className="grid grid-cols-3 gap-6 p-8 bg-white/60 backdrop-blur-md rounded-2xl border border-[hsl(var(--jwc-border-elegant))] shadow-luxury">
                   <div className="text-center space-y-2">
@@ -84,7 +85,7 @@ export default function HomePage() {
                     href="/quote"
                     className="no-underline group relative bg-gradient-to-r from-[hsl(var(--jwc-navy))] to-[hsl(var(--jwc-navy-dark))] text-white px-10 py-4 rounded-xl font-semibold hover:shadow-gold transition-all duration-300 hover:-translate-y-1 inline-flex items-center gap-3 overflow-hidden"
                   >
-                    <span className="relative z-10">Request Quote</span>
+                    <span className="relative z-10">Start Your Transformation</span>
                     <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform" />
                     <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </Link>
@@ -92,7 +93,7 @@ export default function HomePage() {
                     href="/specifications"
                     className="no-underline bg-white/80 backdrop-blur-sm text-[hsl(var(--jwc-navy))] px-10 py-4 rounded-xl font-semibold border-2 border-[hsl(var(--jwc-navy))]/20 hover:border-[hsl(var(--jwc-gold))] hover:bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                   >
-                    View Specifications
+                    Technical Details
                   </Link>
                 </div>
               </div>
@@ -155,11 +156,11 @@ export default function HomePage() {
           <div className="container mx-auto px-8">
             <div className="text-center mb-16 space-y-4">
               <div className="inline-block">
-                <h2 className="mb-0">Why Choose JWC8500 Hybrid?</h2>
+                <h2 className="mb-0">Elevate Your Everyday Living</h2>
                 <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] rounded-full mx-auto mt-4"></div>
               </div>
               <p className="text-lg text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto leading-relaxed">
-                Combining the finest vinyl and aluminum technology for unparalleled performance
+                Experience the perfect harmony of beauty and performance that transforms how you live in your home
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
@@ -169,23 +170,23 @@ export default function HomePage() {
                   <div className="w-16 h-16 bg-gradient-to-br from-[hsl(var(--jwc-navy))] to-[hsl(var(--jwc-navy-dark))] rounded-2xl flex items-center justify-center mb-6 shadow-navy group-hover:scale-110 transition-transform duration-300">
                     <TrendingUp className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-semibold mb-4 text-[hsl(var(--jwc-navy))]">26% More Glass</h3>
+                  <h3 className="text-2xl font-semibold mb-4 text-[hsl(var(--jwc-navy))]">Brighter Mornings</h3>
                   <p className="text-[hsl(var(--foreground))]/75 mb-6 leading-relaxed">
-                    Lower profile aluminum frame increases visible glass area for maximum natural light
-                    and unobstructed views.
+                    Wake up to 26% more natural sunlight flooding your space. Slim frames create seamless
+                    connections to the outdoors, transforming how you experience your home throughout the day.
                   </p>
                   <ul className="space-y-3 text-sm">
                     <li className="flex items-center gap-3 group/item">
                       <CheckCircle2 size={18} className="text-[hsl(var(--jwc-gold))] flex-shrink-0" />
-                      <span className="text-[hsl(var(--foreground))]/70">Slimmer frame profiles</span>
+                      <span className="text-[hsl(var(--foreground))]/70">More natural light, better mood</span>
                     </li>
                     <li className="flex items-center gap-3 group/item">
                       <CheckCircle2 size={18} className="text-[hsl(var(--jwc-gold))] flex-shrink-0" />
-                      <span className="text-[hsl(var(--foreground))]/70">Enhanced curb appeal</span>
+                      <span className="text-[hsl(var(--foreground))]/70">Panoramic views of your garden</span>
                     </li>
                     <li className="flex items-center gap-3 group/item">
                       <CheckCircle2 size={18} className="text-[hsl(var(--jwc-gold))] flex-shrink-0" />
-                      <span className="text-[hsl(var(--foreground))]/70">Better views</span>
+                      <span className="text-[hsl(var(--foreground))]/70">Effortless indoor-outdoor flow</span>
                     </li>
                   </ul>
                 </div>
@@ -197,23 +198,23 @@ export default function HomePage() {
                   <div className="w-16 h-16 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <Thermometer className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-semibold mb-4 text-[hsl(var(--jwc-navy))]">22% Energy Savings</h3>
+                  <h3 className="text-2xl font-semibold mb-4 text-[hsl(var(--jwc-navy))]">Comfort in Every Season</h3>
                   <p className="text-[hsl(var(--foreground))]/75 mb-6 leading-relaxed">
-                    Advanced thermal break technology and premium glass packages exceed 2030 building
-                    code targets.
+                    Stay cozy in winter, cool in summer. Our advanced thermal technology creates the perfect
+                    climate year-round while saving you 22% on energy costs. Comfort that feels effortless.
                   </p>
                   <ul className="space-y-3 text-sm">
                     <li className="flex items-center gap-3 group/item">
                       <CheckCircle2 size={18} className="text-emerald-600 flex-shrink-0" />
-                      <span className="text-[hsl(var(--foreground))]/70">Lower utility bills</span>
+                      <span className="text-[hsl(var(--foreground))]/70">Consistent room temperatures</span>
                     </li>
                     <li className="flex items-center gap-3 group/item">
                       <CheckCircle2 size={18} className="text-emerald-600 flex-shrink-0" />
-                      <span className="text-[hsl(var(--foreground))]/70">Rebate eligible</span>
+                      <span className="text-[hsl(var(--foreground))]/70">No more drafty corners</span>
                     </li>
                     <li className="flex items-center gap-3 group/item">
                       <CheckCircle2 size={18} className="text-emerald-600 flex-shrink-0" />
-                      <span className="text-[hsl(var(--foreground))]/70">Year-round comfort</span>
+                      <span className="text-[hsl(var(--foreground))]/70">Reduced heating & cooling costs</span>
                     </li>
                   </ul>
                 </div>
@@ -225,23 +226,23 @@ export default function HomePage() {
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-purple-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <Shield className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-semibold mb-4 text-[hsl(var(--jwc-navy))]">Superior Durability</h3>
+                  <h3 className="text-2xl font-semibold mb-4 text-[hsl(var(--jwc-navy))]">Peace of Mind, Always</h3>
                   <p className="text-[hsl(var(--foreground))]/75 mb-6 leading-relaxed">
-                    Aluminum exterior withstands harsh weather while vinyl interior never needs
-                    painting or maintenance.
+                    Built to last through storms, seasons, and decades. Spend your weekends enjoying life,
+                    not maintaining windows. Our hybrid design stays beautiful with virtually no effort.
                   </p>
                   <ul className="space-y-3 text-sm">
                     <li className="flex items-center gap-3 group/item">
                       <CheckCircle2 size={18} className="text-purple-600 flex-shrink-0" />
-                      <span className="text-[hsl(var(--foreground))]/70">Weather resistant</span>
+                      <span className="text-[hsl(var(--foreground))]/70">Zero painting, ever</span>
                     </li>
                     <li className="flex items-center gap-3 group/item">
                       <CheckCircle2 size={18} className="text-purple-600 flex-shrink-0" />
-                      <span className="text-[hsl(var(--foreground))]/70">Low maintenance</span>
+                      <span className="text-[hsl(var(--foreground))]/70">Family-safe security locks</span>
                     </li>
                     <li className="flex items-center gap-3 group/item">
                       <CheckCircle2 size={18} className="text-purple-600 flex-shrink-0" />
-                      <span className="text-[hsl(var(--foreground))]/70">10-year warranty</span>
+                      <span className="text-[hsl(var(--foreground))]/70">Backed by 10-year warranty</span>
                     </li>
                   </ul>
                 </div>
@@ -257,6 +258,155 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Lifestyle-Focused Section - How Windows Transform Your Home */}
+        <section className="py-24 bg-white relative overflow-hidden">
+          <div className="container mx-auto px-8">
+            <div className="text-center mb-16 space-y-4">
+              <div className="inline-block">
+                <h2 className="mb-0">More Than Windows. A Lifestyle Upgrade.</h2>
+                <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] rounded-full mx-auto mt-4"></div>
+              </div>
+              <p className="text-lg text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto leading-relaxed">
+                Imagine starting every morning bathed in natural light, sipping coffee in perfect comfort,
+                and enjoying crystal-clear views of your surroundings. This is life with JWC8500.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+              <div className="space-y-6">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[hsl(var(--jwc-gold))]/15 to-transparent px-4 py-2 rounded-full border border-[hsl(var(--jwc-gold))]/20">
+                  <Sparkles className="w-4 h-4 text-[hsl(var(--jwc-gold))]" />
+                  <span className="text-sm font-medium text-[hsl(var(--jwc-navy))]">Morning Ritual</span>
+                </div>
+                <h3 className="text-3xl font-semibold text-[hsl(var(--jwc-navy))]">
+                  Natural Light That Changes Everything
+                </h3>
+                <p className="text-lg text-[hsl(var(--foreground))]/75 leading-relaxed">
+                  Our clients tell us their mornings feel different now. The 26% increase in glass area means
+                  rooms are flooded with gentle, natural sunlight that makes every space feel alive. Your home
+                  office becomes more productive. Your kitchen becomes more inviting. Your living room becomes
+                  the heart of your home.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-[hsl(var(--jwc-gold))] flex-shrink-0 mt-1" />
+                    <div>
+                      <span className="font-semibold text-[hsl(var(--jwc-navy))]">Better sleep patterns</span>
+                      <span className="text-[hsl(var(--foreground))]/70"> — Natural circadian rhythm support</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-[hsl(var(--jwc-gold))] flex-shrink-0 mt-1" />
+                    <div>
+                      <span className="font-semibold text-[hsl(var(--jwc-navy))]">Elevated mood</span>
+                      <span className="text-[hsl(var(--foreground))]/70"> — Natural light boosts serotonin</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-[hsl(var(--jwc-gold))] flex-shrink-0 mt-1" />
+                    <div>
+                      <span className="font-semibold text-[hsl(var(--jwc-navy))]">Lower energy bills</span>
+                      <span className="text-[hsl(var(--foreground))]/70"> — Less artificial lighting needed</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-luxury">
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-50 to-orange-100 flex items-center justify-center">
+                  <svg viewBox="0 0 600 450" className="w-full h-full">
+                    <defs>
+                      <linearGradient id="morningLight" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#fef3c7" />
+                        <stop offset="100%" stopColor="#fed7aa" />
+                      </linearGradient>
+                      <radialGradient id="sunGlow">
+                        <stop offset="0%" stopColor="#fbbf24" stopOpacity="0.6" />
+                        <stop offset="100%" stopColor="#fbbf24" stopOpacity="0" />
+                      </radialGradient>
+                    </defs>
+                    <rect width="600" height="450" fill="url(#morningLight)" />
+                    <circle cx="450" cy="100" r="80" fill="url(#sunGlow)" />
+                    <circle cx="450" cy="100" r="40" fill="#fbbf24" />
+                    <rect x="80" y="80" width="440" height="290" fill="none" stroke="#1a365d" strokeWidth="14" />
+                    <line x1="300" y1="80" x2="300" y2="370" stroke="#1a365d" strokeWidth="10" />
+                    <line x1="80" y1="225" x2="520" y2="225" stroke="#1a365d" strokeWidth="10" />
+                    <rect x="92" y="92" width="196" height="121" fill="rgba(255, 255, 255, 0.4)" />
+                    <rect x="312" y="92" width="196" height="121" fill="rgba(255, 255, 255, 0.4)" />
+                    <rect x="92" y="237" width="196" height="121" fill="rgba(255, 255, 255, 0.4)" />
+                    <rect x="312" y="237" width="196" height="121" fill="rgba(255, 255, 255, 0.4)" />
+                    <text x="300" y="420" fontSize="24" fontWeight="600" fill="#1a365d" textAnchor="middle" fontFamily="Cormorant Garamond, serif">26% More Natural Light</text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-luxury order-2 md:order-1">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-cyan-100 flex items-center justify-center">
+                  <svg viewBox="0 0 600 450" className="w-full h-full">
+                    <defs>
+                      <linearGradient id="quietSpace" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#dbeafe" />
+                        <stop offset="100%" stopColor="#cffafe" />
+                      </linearGradient>
+                    </defs>
+                    <rect width="600" height="450" fill="url(#quietSpace)" />
+                    <rect x="80" y="80" width="440" height="290" fill="none" stroke="#1a365d" strokeWidth="14" />
+                    <line x1="300" y1="80" x2="300" y2="370" stroke="#1a365d" strokeWidth="10" />
+                    <line x1="80" y1="225" x2="520" y2="225" stroke="#1a365d" strokeWidth="10" />
+                    <rect x="92" y="92" width="196" height="121" fill="rgba(255, 255, 255, 0.5)" />
+                    <rect x="312" y="92" width="196" height="121" fill="rgba(255, 255, 255, 0.5)" />
+                    <rect x="92" y="237" width="196" height="121" fill="rgba(255, 255, 255, 0.5)" />
+                    <rect x="312" y="237" width="196" height="121" fill="rgba(255, 255, 255, 0.5)" />
+                    {/* Sound wave visualization */}
+                    <path d="M 30 225 Q 40 200, 50 225 T 70 225" stroke="#94a3b8" strokeWidth="3" fill="none" opacity="0.3" />
+                    <path d="M 30 225 Q 35 215, 40 225 T 50 225" stroke="#94a3b8" strokeWidth="2" fill="none" opacity="0.5" />
+                    <line x1="60" y1="225" x2="75" y2="225" stroke="#ef4444" strokeWidth="4" opacity="0.6" />
+                    <text x="300" y="420" fontSize="24" fontWeight="600" fill="#1a365d" textAnchor="middle" fontFamily="Cormorant Garamond, serif">35dB Noise Reduction</text>
+                  </svg>
+                </div>
+              </div>
+              <div className="space-y-6 order-1 md:order-2">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500/15 to-transparent px-4 py-2 rounded-full border border-emerald-500/20">
+                  <Volume2 className="w-4 h-4 text-emerald-600" />
+                  <span className="text-sm font-medium text-[hsl(var(--jwc-navy))]">Peace & Quiet</span>
+                </div>
+                <h3 className="text-3xl font-semibold text-[hsl(var(--jwc-navy))]">
+                  Your Sanctuary From the Outside World
+                </h3>
+                <p className="text-lg text-[hsl(var(--foreground))]/75 leading-relaxed">
+                  Live on a busy street? Near a highway? With 35dB sound reduction, you'll finally experience
+                  true tranquility at home. Read a book without distraction. Host dinner parties without
+                  competing with traffic noise. Sleep peacefully through the night.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <span className="font-semibold text-[hsl(var(--jwc-navy))]">Peaceful home office</span>
+                      <span className="text-[hsl(var(--foreground))]/70"> — Focus without interruptions</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <span className="font-semibold text-[hsl(var(--jwc-navy))]">Better sleep quality</span>
+                      <span className="text-[hsl(var(--foreground))]/70"> — Wake up refreshed</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <span className="font-semibold text-[hsl(var(--jwc-navy))]">Stress-free entertaining</span>
+                      <span className="text-[hsl(var(--foreground))]/70"> — Enjoy conversations without shouting</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Interactive Customization Section - Luxury Edition */}
         <section className="py-24 bg-gradient-to-b from-[hsl(var(--jwc-sand))] to-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-5">
@@ -265,11 +415,12 @@ export default function HomePage() {
           <div className="container mx-auto px-8 relative z-10">
             <div className="text-center mb-16 space-y-4">
               <div className="inline-block">
-                <h2 className="mb-0">Design Your Perfect Window</h2>
+                <h2 className="mb-0">Design Windows That Reflect Your Style</h2>
                 <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] rounded-full mx-auto mt-4"></div>
               </div>
               <p className="text-lg text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto leading-relaxed">
-                Customize colors, grilles, and glass technology to match your project requirements
+                Create windows that harmonize with your home's personality. Choose from sophisticated colors,
+                elegant grille patterns, and performance glass that suits your lifestyle.
               </p>
             </div>
 
@@ -298,9 +449,10 @@ export default function HomePage() {
         {/* Product Gallery */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-8">
-            <h2 className="text-center mb-3">Installation Gallery</h2>
+            <h2 className="text-center mb-3">Real Homes, Real Transformations</h2>
             <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-              See the JWC8500 in real-world applications across residential and commercial projects
+              See how homeowners like you have elevated their living spaces with the JWC8500.
+              From cozy bungalows to modern estates, discover the possibilities.
             </p>
             <ProductGallery />
           </div>
@@ -315,11 +467,12 @@ export default function HomePage() {
           <div className="container mx-auto px-8 relative z-10">
             <div className="text-center mb-16 space-y-4">
               <div className="inline-block">
-                <h2 className="text-white mb-0">Technical Performance</h2>
+                <h2 className="text-white mb-0">The Science Behind Your Comfort</h2>
                 <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] rounded-full mx-auto mt-4"></div>
               </div>
               <p className="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-                Engineered to exceed Canadian building code requirements
+                Exceptional performance you can feel, backed by numbers that matter. Here's how we deliver
+                on our promise of better living through better windows.
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
@@ -357,7 +510,7 @@ export default function HomePage() {
                 href="/specifications"
                 className="no-underline inline-block bg-white text-[hsl(var(--jwc-navy))] px-10 py-4 rounded-xl font-semibold hover:bg-[hsl(var(--jwc-gold))] hover:text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-gold"
               >
-                View Complete Specifications
+                Explore All Technical Details
               </Link>
             </div>
           </div>
@@ -502,18 +655,18 @@ export default function HomePage() {
                 </span>
               </div>
             </div>
-            <h2 className="mb-6 text-white max-w-3xl mx-auto">Ready to Elevate Your Building?</h2>
+            <h2 className="mb-6 text-white max-w-3xl mx-auto">Ready to Transform Your Home?</h2>
             <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] rounded-full mx-auto mb-8"></div>
             <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Contact us today for a detailed quote and discover how the JWC8500 Hybrid can enhance
-              your project with superior performance and energy efficiency.
+              Let's start a conversation about bringing more light, comfort, and beauty into your space.
+              Request your personalized quote and see how the JWC8500 can elevate your lifestyle.
             </p>
             <div className="flex flex-wrap gap-6 justify-center mb-12">
               <Link
                 href="/quote"
                 className="no-underline group relative bg-gradient-to-r from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] text-[hsl(var(--jwc-navy))] px-12 py-5 rounded-xl font-bold text-lg hover:shadow-gold transition-all duration-300 hover:-translate-y-1 inline-flex items-center gap-3 overflow-hidden"
               >
-                <span className="relative z-10">Request Your Quote Now</span>
+                <span className="relative z-10">Get Your Free Quote</span>
                 <ArrowRight size={22} className="relative z-10 group-hover:translate-x-1 transition-transform" />
                 <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </Link>
@@ -521,7 +674,7 @@ export default function HomePage() {
                 href="/specifications"
                 className="no-underline bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-12 py-5 rounded-xl font-bold text-lg hover:bg-white/20 hover:border-[hsl(var(--jwc-gold))] transition-all duration-300 hover:-translate-y-1"
               >
-                Download Specifications
+                View Product Details
               </Link>
             </div>
             <div className="inline-block p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
