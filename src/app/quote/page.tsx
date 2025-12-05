@@ -4,10 +4,16 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Header } from '@/components/jwc/Header'
 import { Footer } from '@/components/jwc/Footer'
-import { Phone, Mail, MapPin, CheckCircle2, ArrowLeft } from 'lucide-react'
+import { Phone, Mail, MapPin, CheckCircle2, ArrowLeft, Loader2, AlertCircle } from 'lucide-react'
+
+interface FormErrors {
+  [key: string]: string
+}
 
 export default function QuotePage() {
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [errors, setErrors] = useState<FormErrors>({})
   const [formData, setFormData] = useState({
     projectType: '',
     companyName: '',
@@ -23,15 +29,133 @@ export default function QuotePage() {
     additionalNotes: ''
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Comprehensive form validation
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {}
+
+    // Project type validation
+    if (!formData.projectType) {
+      newErrors.projectType = 'Please select a project type'
+    }
+
+    // Company name validation
+    if (!formData.companyName || formData.companyName.trim().length < 2) {
+      newErrors.companyName = 'Company name must be at least 2 characters'
+    }
+
+    // Contact name validation
+    if (!formData.contactName || formData.contactName.trim().length < 2) {
+      newErrors.contactName = 'Contact name must be at least 2 characters'
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!formData.email || !emailRegex.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address'
+    }
+
+    // Phone validation
+    const phoneRegex = /^[0-9()\s+-]{10,}$/
+    if (!formData.phone || !phoneRegex.test(formData.phone)) {
+      newErrors.phone = 'Please enter a valid phone number (at least 10 digits)'
+    }
+
+    // Quantity validation
+    const quantity = parseInt(formData.quantity)
+    if (!formData.quantity || isNaN(quantity) || quantity < 1) {
+      newErrors.quantity = 'Please enter a valid quantity (at least 1)'
+    } else if (quantity > 10000) {
+      newErrors.quantity = 'For orders over 10,000 units, please contact us directly'
+    }
+
+    // Timeline validation
+    if (!formData.timeline) {
+      newErrors.timeline = 'Please select an installation timeline'
+    }
+
+    // Budget validation
+    if (!formData.budget) {
+      newErrors.budget = 'Please select a budget range'
+    }
+
+    // Custom sizing validation
+    if (formData.customSizing) {
+      const width = parseFloat(formData.width)
+      const height = parseFloat(formData.height)
+
+      if (!formData.width || isNaN(width) || width <= 0) {
+        newErrors.width = 'Please enter a valid width'
+      } else if (width > 8) {
+        newErrors.width = 'Width cannot exceed 8 feet'
+      }
+
+      if (!formData.height || isNaN(height) || height <= 0) {
+        newErrors.height = 'Please enter a valid height'
+      } else if (height > 12) {
+        newErrors.height = 'Height cannot exceed 12 feet'
+      }
+    }
+
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
-    // In production, send form data to backend
-    console.log('Quote request submitted:', formData)
+
+    // Clear previous errors
+    setErrors({})
+
+    // Validate form
+    if (!validateForm()) {
+      // Scroll to first error
+      const firstErrorField = Object.keys(errors)[0]
+      const element = document.getElementById(firstErrorField)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' })
+        element.focus()
+      }
+      return
+    }
+
+    setIsSubmitting(true)
+
+    try {
+      // Simulate API call with realistic delay
+      await new Promise(resolve => setTimeout(resolve, 1500))
+
+      // In production, send to actual backend
+      console.log('Quote request submitted:', formData)
+
+      setSubmitted(true)
+
+      // Reset form after successful submission
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }, 100)
+
+    } catch (error) {
+      console.error('Submission error:', error)
+      setErrors({
+        submit: 'There was an error submitting your request. Please try again or contact us directly.'
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target
+
+    // Clear error for this field when user starts typing
+    if (errors[name]) {
+      setErrors(prev => {
+        const newErrors = { ...prev }
+        delete newErrors[name]
+        return newErrors
+      })
+    }
+
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
@@ -166,6 +290,17 @@ export default function QuotePage() {
             <div className="max-w-3xl mx-auto">
               <h2 className="text-center mb-12">Project Details</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Global Error Message */}
+                {errors.submit && (
+                  <div className="bg-red-50 border-2 border-red-500 rounded-lg p-4 flex items-start gap-3" role="alert">
+                    <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-red-900">Submission Error</p>
+                      <p className="text-red-700 text-sm mt-1">{errors.submit}</p>
+                    </div>
+                  </div>
+                )}
+
                 {/* Project Type */}
                 <div>
                   <label htmlFor="projectType" className="block text-sm font-medium text-gray-700 mb-2">
@@ -177,7 +312,12 @@ export default function QuotePage() {
                     value={formData.projectType}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[hsl(var(--jwc-navy))] focus:ring-2 focus:ring-[hsl(var(--jwc-navy))]/20"
+                    disabled={isSubmitting}
+                    className={`w-full px-4 py-3 border rounded focus:border-[hsl(var(--jwc-navy))] focus:ring-2 focus:ring-[hsl(var(--jwc-navy))]/20 transition-colors ${
+                      errors.projectType ? 'border-red-500 bg-red-50' : 'border-gray-300'
+                    } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    aria-invalid={errors.projectType ? 'true' : 'false'}
+                    aria-describedby={errors.projectType ? 'projectType-error' : undefined}
                   >
                     <option value="">Select project type</option>
                     <option value="new-construction">New Construction</option>
@@ -186,6 +326,12 @@ export default function QuotePage() {
                     <option value="commercial">Commercial Building</option>
                     <option value="residential">Residential</option>
                   </select>
+                  {errors.projectType && (
+                    <p id="projectType-error" className="text-sm text-red-600 mt-1 flex items-center gap-1">
+                      <AlertCircle size={14} />
+                      {errors.projectType}
+                    </p>
+                  )}
                 </div>
 
                 {/* Company Name */}
@@ -387,9 +533,20 @@ export default function QuotePage() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full bg-[hsl(var(--jwc-navy))] text-white px-8 py-4 rounded-lg font-medium hover:bg-[hsl(var(--jwc-navy-dark))] transition-all text-lg shadow-navy"
+                  disabled={isSubmitting}
+                  className={`w-full bg-[hsl(var(--jwc-navy))] text-white px-8 py-4 rounded-lg font-medium transition-all text-lg shadow-navy inline-flex items-center justify-center gap-3 ${
+                    isSubmitting ? 'opacity-75 cursor-not-allowed' : 'hover:bg-[hsl(var(--jwc-navy-dark))] hover:-translate-y-0.5'
+                  }`}
+                  aria-busy={isSubmitting}
                 >
-                  Submit Quote Request
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 size={22} className="animate-spin" />
+                      <span>Submitting Request...</span>
+                    </>
+                  ) : (
+                    <span>Submit Quote Request</span>
+                  )}
                 </button>
 
                 <p className="text-sm text-gray-600 text-center">

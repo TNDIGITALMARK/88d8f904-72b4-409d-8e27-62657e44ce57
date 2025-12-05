@@ -21,6 +21,33 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "JWC8500 Hybrid Windows | Transform Your Home with Natural Light",
   description: "Elevate your lifestyle with JWC8500 Hybrid Windows. Experience 26% more natural light, 22% energy savings, and peaceful comfort in every season. Beautiful, durable, effortless.",
+  keywords: "hybrid windows, energy efficient windows, premium windows, JWC8500, window replacement, modern windows, thermal windows, sound reduction windows",
+  authors: [{ name: "JWC Windows" }],
+  creator: "JWC Windows",
+  publisher: "JWC Windows",
+  openGraph: {
+    title: "JWC8500 Hybrid Windows | Transform Your Home with Natural Light",
+    description: "Experience 26% more natural light, 22% energy savings, and peaceful comfort in every season.",
+    type: "website",
+    locale: "en_US",
+    siteName: "JWC Windows",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JWC8500 Hybrid Windows | Transform Your Home",
+    description: "Premium hybrid windows with 26% more light, 22% energy savings.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({

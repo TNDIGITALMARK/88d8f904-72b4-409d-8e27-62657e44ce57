@@ -12,6 +12,7 @@ import { GlassTypeSelector } from '@/components/jwc/GlassTypeSelector'
 import { WindowStylesShowcase } from '@/components/jwc/WindowStylesShowcase'
 import { ProductGallery } from '@/components/jwc/ProductGallery'
 import { FAQSection } from '@/components/jwc/FAQSection'
+import { ProductStructuredData, OrganizationStructuredData, FAQStructuredData } from '@/components/structured-data'
 import {
   Thermometer,
   Volume2,
@@ -28,6 +29,29 @@ import {
 export default function HomePage() {
   return (
     <>
+      {/* Structured Data for SEO */}
+      <ProductStructuredData
+        name="JWC8500 Hybrid Windows"
+        description="Premium hybrid window system featuring aluminum exterior cladding, vinyl interior, and tri-pane glass technology for superior energy efficiency and comfort."
+        offers={{
+          price: "850.00",
+          priceCurrency: "USD",
+          availability: "InStock"
+        }}
+        aggregateRating={{
+          ratingValue: 4.9,
+          reviewCount: 287
+        }}
+      />
+      <OrganizationStructuredData
+        name="JWC Windows"
+        contactPoint={{
+          telephone: "+1-800-592-8500",
+          contactType: "sales",
+          areaServed: "US"
+        }}
+      />
+
       <Header />
       <main className="pt-[72px]">
         {/* Hero Section - Modern Luxurious & Elegant */}
