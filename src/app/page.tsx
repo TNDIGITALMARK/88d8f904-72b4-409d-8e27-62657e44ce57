@@ -30,12 +30,12 @@ export default function HomePage() {
     <>
       <Header />
       <main className="pt-[72px]">
-        {/* Hero Section - Luxurious & Elegant */}
-        <section className="relative overflow-hidden py-20 md:py-32">
-          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--jwc-ivory))] via-[hsl(var(--jwc-sand))] to-white"></div>
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-[hsl(var(--jwc-gold))] blur-[120px] rounded-full"></div>
-            <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[hsl(var(--jwc-navy))] blur-[100px] rounded-full"></div>
+        {/* Hero Section - Modern Luxurious & Elegant */}
+        <section className="relative overflow-hidden py-24 md:py-36">
+          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--jwc-ivory))] via-white to-[hsl(var(--jwc-sand))]"></div>
+          <div className="absolute inset-0 opacity-[0.04]">
+            <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-[hsl(var(--jwc-gold))] blur-[140px] rounded-full"></div>
+            <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[hsl(var(--jwc-navy))] blur-[120px] rounded-full"></div>
           </div>
           <div className="container mx-auto px-8 relative z-10">
             <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -60,22 +60,22 @@ export default function HomePage() {
                   timeless aesthetics with intelligent design, bringing 26% more natural light into your home
                   while reducing energy costs by 22%. Live better, naturally.
                 </p>
-                <div className="grid grid-cols-3 gap-6 p-8 bg-white/60 backdrop-blur-md rounded-2xl border border-[hsl(var(--jwc-border-elegant))] shadow-luxury">
+                <div className="grid grid-cols-3 gap-6 p-10 bg-white/70 backdrop-blur-xl rounded-3xl border border-[hsl(var(--jwc-border-elegant))]/60 shadow-luxury">
                   <div className="text-center space-y-2">
-                    <div className="text-4xl font-bold text-[hsl(var(--jwc-navy))]">0.20</div>
-                    <div className="text-xs uppercase tracking-wider text-[hsl(var(--muted-foreground))] font-medium">
+                    <div className="text-5xl font-bold text-[hsl(var(--jwc-navy))] tracking-tight">0.20</div>
+                    <div className="text-xs uppercase tracking-wider text-[hsl(var(--muted-foreground))] font-semibold">
                       U-Factor
                     </div>
                   </div>
-                  <div className="text-center space-y-2 border-x border-[hsl(var(--jwc-border-elegant))]">
-                    <div className="text-4xl font-bold text-[hsl(var(--jwc-navy))]">35dB</div>
-                    <div className="text-xs uppercase tracking-wider text-[hsl(var(--muted-foreground))] font-medium">
+                  <div className="text-center space-y-2 border-x border-[hsl(var(--jwc-border-elegant))]/40">
+                    <div className="text-5xl font-bold text-[hsl(var(--jwc-navy))] tracking-tight">35dB</div>
+                    <div className="text-xs uppercase tracking-wider text-[hsl(var(--muted-foreground))] font-semibold">
                       Noise Reduction
                     </div>
                   </div>
                   <div className="text-center space-y-2">
-                    <div className="text-4xl font-bold text-[hsl(var(--jwc-gold))]">+22%</div>
-                    <div className="text-xs uppercase tracking-wider text-[hsl(var(--muted-foreground))] font-medium">
+                    <div className="text-5xl font-bold text-[hsl(var(--jwc-gold))] tracking-tight">+22%</div>
+                    <div className="text-xs uppercase tracking-wider text-[hsl(var(--muted-foreground))] font-semibold">
                       Efficiency
                     </div>
                   </div>
@@ -83,15 +83,15 @@ export default function HomePage() {
                 <div className="flex flex-wrap gap-4 pt-4">
                   <Link
                     href="/quote"
-                    className="no-underline group relative bg-gradient-to-r from-[hsl(var(--jwc-navy))] to-[hsl(var(--jwc-navy-dark))] text-white px-10 py-4 rounded-xl font-semibold hover:shadow-gold transition-all duration-300 hover:-translate-y-1 inline-flex items-center gap-3 overflow-hidden"
+                    className="no-underline group relative bg-gradient-to-r from-[hsl(var(--jwc-navy))] to-[hsl(var(--jwc-navy-dark))] text-white px-12 py-4.5 rounded-2xl font-semibold hover:shadow-gold transition-all duration-400 hover:-translate-y-1.5 inline-flex items-center gap-3 overflow-hidden"
                   >
                     <span className="relative z-10">Start Your Transformation</span>
-                    <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1.5 transition-transform duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
                   </Link>
                   <Link
                     href="/specifications"
-                    className="no-underline bg-white/80 backdrop-blur-sm text-[hsl(var(--jwc-navy))] px-10 py-4 rounded-xl font-semibold border-2 border-[hsl(var(--jwc-navy))]/20 hover:border-[hsl(var(--jwc-gold))] hover:bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                    className="no-underline bg-white/85 backdrop-blur-md text-[hsl(var(--jwc-navy))] px-12 py-4.5 rounded-2xl font-semibold border border-[hsl(var(--jwc-navy))]/15 hover:border-[hsl(var(--jwc-gold))] hover:bg-white transition-all duration-400 hover:-translate-y-1.5 hover:shadow-lg"
                   >
                     Technical Details
                   </Link>
@@ -151,20 +151,20 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Key Benefits - Luxury Visual Cards */}
-        <section className="py-24 bg-gradient-to-b from-white to-[hsl(var(--jwc-sand))]">
+        {/* Key Benefits - Modern Luxury Visual Cards */}
+        <section className="py-28 bg-gradient-to-b from-white via-[hsl(var(--jwc-ivory))] to-[hsl(var(--jwc-sand))]">
           <div className="container mx-auto px-8">
-            <div className="text-center mb-16 space-y-4">
+            <div className="text-center mb-20 space-y-5">
               <div className="inline-block">
                 <h2 className="mb-0">Elevate Your Everyday Living</h2>
-                <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] rounded-full mx-auto mt-4"></div>
+                <div className="w-32 h-1.5 bg-gradient-to-r from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] rounded-full mx-auto mt-5"></div>
               </div>
               <p className="text-lg text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto leading-relaxed">
                 Experience the perfect harmony of beauty and performance that transforms how you live in your home
               </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="group bg-white/80 backdrop-blur-sm p-10 rounded-2xl border border-[hsl(var(--jwc-border-elegant))] shadow-lg hover:shadow-luxury transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+            <div className="grid md:grid-cols-3 gap-10">
+              <div className="group bg-white/90 backdrop-blur-md p-12 rounded-3xl border border-[hsl(var(--jwc-border-elegant))]/50 shadow-lg hover:shadow-luxury transition-all duration-500 hover:-translate-y-3 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[hsl(var(--jwc-gold))]/10 to-transparent rounded-full blur-2xl -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
                 <div className="relative z-10">
                   <div className="w-16 h-16 bg-gradient-to-br from-[hsl(var(--jwc-navy))] to-[hsl(var(--jwc-navy-dark))] rounded-2xl flex items-center justify-center mb-6 shadow-navy group-hover:scale-110 transition-transform duration-300">
@@ -192,10 +192,10 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="group bg-white/80 backdrop-blur-sm p-10 rounded-2xl border border-[hsl(var(--jwc-border-elegant))] shadow-lg hover:shadow-luxury transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+              <div className="group bg-white/90 backdrop-blur-md p-12 rounded-3xl border border-[hsl(var(--jwc-border-elegant))]/50 shadow-lg hover:shadow-luxury transition-all duration-500 hover:-translate-y-3 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-500/10 to-transparent rounded-full blur-2xl -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
                 <div className="relative z-10">
-                  <div className="w-16 h-16 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-400">
                     <Thermometer className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-semibold mb-4 text-[hsl(var(--jwc-navy))]">Comfort in Every Season</h3>
@@ -220,10 +220,10 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="group bg-white/80 backdrop-blur-sm p-10 rounded-2xl border border-[hsl(var(--jwc-border-elegant))] shadow-lg hover:shadow-luxury transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+              <div className="group bg-white/90 backdrop-blur-md p-12 rounded-3xl border border-[hsl(var(--jwc-border-elegant))]/50 shadow-lg hover:shadow-luxury transition-all duration-500 hover:-translate-y-3 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/10 to-transparent rounded-full blur-2xl -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
                 <div className="relative z-10">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-purple-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-purple-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-400">
                     <Shield className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-semibold mb-4 text-[hsl(var(--jwc-navy))]">Peace of Mind, Always</h3>
@@ -407,16 +407,16 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Interactive Customization Section - Luxury Edition */}
-        <section className="py-24 bg-gradient-to-b from-[hsl(var(--jwc-sand))] to-white relative overflow-hidden">
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[hsl(var(--jwc-gold))] blur-[100px] rounded-full"></div>
+        {/* Interactive Customization Section - Modern Luxury Edition */}
+        <section className="py-28 bg-gradient-to-b from-[hsl(var(--jwc-sand))] via-[hsl(var(--jwc-ivory))] to-white relative overflow-hidden">
+          <div className="absolute inset-0 opacity-[0.03]">
+            <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-[hsl(var(--jwc-gold))] blur-[120px] rounded-full"></div>
           </div>
           <div className="container mx-auto px-8 relative z-10">
-            <div className="text-center mb-16 space-y-4">
+            <div className="text-center mb-20 space-y-5">
               <div className="inline-block">
                 <h2 className="mb-0">Design Windows That Reflect Your Style</h2>
-                <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] rounded-full mx-auto mt-4"></div>
+                <div className="w-32 h-1.5 bg-gradient-to-r from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] rounded-full mx-auto mt-5"></div>
               </div>
               <p className="text-lg text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto leading-relaxed">
                 Create windows that harmonize with your home's personality. Choose from sophisticated colors,
@@ -424,9 +424,9 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Luxury Customization Card */}
+            {/* Modern Luxury Customization Card */}
             <div className="max-w-6xl mx-auto">
-              <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-luxury border border-[hsl(var(--jwc-border-elegant))] p-12">
+              <div className="bg-white/95 backdrop-blur-xl rounded-[2rem] shadow-luxury border border-[hsl(var(--jwc-border-elegant))]/40 p-14">
                 {/* Color Customization */}
                 <div className="mb-16">
                   <ColorSelector />
@@ -458,48 +458,48 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Technical Specifications Preview - Luxury Dark Section */}
-        <section className="py-24 bg-gradient-to-br from-[hsl(var(--jwc-navy))] via-[hsl(var(--jwc-navy-dark))] to-[hsl(var(--jwc-navy))] text-white relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-[hsl(var(--jwc-gold))] blur-[150px] rounded-full"></div>
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-white blur-[120px] rounded-full"></div>
+        {/* Technical Specifications Preview - Modern Luxury Dark Section */}
+        <section className="py-28 bg-gradient-to-br from-[hsl(var(--jwc-navy))] via-[hsl(var(--jwc-navy-dark))] to-[hsl(var(--jwc-navy))] text-white relative overflow-hidden">
+          <div className="absolute inset-0 opacity-[0.08]">
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[hsl(var(--jwc-gold))] blur-[160px] rounded-full"></div>
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-white blur-[140px] rounded-full"></div>
           </div>
           <div className="container mx-auto px-8 relative z-10">
-            <div className="text-center mb-16 space-y-4">
+            <div className="text-center mb-20 space-y-5">
               <div className="inline-block">
                 <h2 className="text-white mb-0">The Science Behind Your Comfort</h2>
-                <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] rounded-full mx-auto mt-4"></div>
+                <div className="w-32 h-1.5 bg-gradient-to-r from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] rounded-full mx-auto mt-5"></div>
               </div>
               <p className="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
                 Exceptional performance you can feel, backed by numbers that matter. Here's how we deliver
                 on our promise of better living through better windows.
               </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-20">
               <div className="text-center group">
-                <div className="mb-6 inline-block p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 group-hover:border-[hsl(var(--jwc-gold))]/50 transition-all duration-300 group-hover:scale-110">
-                  <div className="text-6xl font-bold bg-gradient-to-br from-white to-white/70 bg-clip-text text-transparent mb-2">0.20</div>
+                <div className="mb-6 inline-block p-8 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 group-hover:border-[hsl(var(--jwc-gold))]/60 transition-all duration-400 group-hover:scale-110">
+                  <div className="text-6xl font-bold bg-gradient-to-br from-white to-white/70 bg-clip-text text-transparent mb-2 tracking-tight">0.20</div>
                 </div>
                 <div className="text-sm font-semibold text-white/90 mb-2 uppercase tracking-wider">U-Factor Rating</div>
                 <div className="text-xs text-white/50">Tri-pane configuration</div>
               </div>
               <div className="text-center group">
-                <div className="mb-6 inline-block p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 group-hover:border-[hsl(var(--jwc-gold))]/50 transition-all duration-300 group-hover:scale-110">
-                  <div className="text-6xl font-bold bg-gradient-to-br from-white to-white/70 bg-clip-text text-transparent mb-2">35dB</div>
+                <div className="mb-6 inline-block p-8 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 group-hover:border-[hsl(var(--jwc-gold))]/60 transition-all duration-400 group-hover:scale-110">
+                  <div className="text-6xl font-bold bg-gradient-to-br from-white to-white/70 bg-clip-text text-transparent mb-2 tracking-tight">35dB</div>
                 </div>
                 <div className="text-sm font-semibold text-white/90 mb-2 uppercase tracking-wider">Sound Reduction</div>
                 <div className="text-xs text-white/50">Tri-pane acoustic glass</div>
               </div>
               <div className="text-center group">
-                <div className="mb-6 inline-block p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 group-hover:border-[hsl(var(--jwc-gold))]/50 transition-all duration-300 group-hover:scale-110">
-                  <div className="text-6xl font-bold bg-gradient-to-br from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] bg-clip-text text-transparent mb-2">Class 5</div>
+                <div className="mb-6 inline-block p-8 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 group-hover:border-[hsl(var(--jwc-gold))]/60 transition-all duration-400 group-hover:scale-110">
+                  <div className="text-6xl font-bold bg-gradient-to-br from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] bg-clip-text text-transparent mb-2 tracking-tight">Class 5</div>
                 </div>
                 <div className="text-sm font-semibold text-white/90 mb-2 uppercase tracking-wider">Wind Resistance</div>
                 <div className="text-xs text-white/50">Structural performance</div>
               </div>
               <div className="text-center group">
-                <div className="mb-6 inline-block p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 group-hover:border-[hsl(var(--jwc-gold))]/50 transition-all duration-300 group-hover:scale-110">
-                  <div className="text-6xl font-bold bg-gradient-to-br from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] bg-clip-text text-transparent mb-2">ER 44</div>
+                <div className="mb-6 inline-block p-8 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 group-hover:border-[hsl(var(--jwc-gold))]/60 transition-all duration-400 group-hover:scale-110">
+                  <div className="text-6xl font-bold bg-gradient-to-br from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] bg-clip-text text-transparent mb-2 tracking-tight">ER 44</div>
                 </div>
                 <div className="text-sm font-semibold text-white/90 mb-2 uppercase tracking-wider">Energy Rating</div>
                 <div className="text-xs text-white/50">Exceeds 2030 targets</div>
@@ -508,7 +508,7 @@ export default function HomePage() {
             <div className="text-center">
               <Link
                 href="/specifications"
-                className="no-underline inline-block bg-white text-[hsl(var(--jwc-navy))] px-10 py-4 rounded-xl font-semibold hover:bg-[hsl(var(--jwc-gold))] hover:text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-gold"
+                className="no-underline inline-block bg-white text-[hsl(var(--jwc-navy))] px-12 py-4.5 rounded-2xl font-semibold hover:bg-[hsl(var(--jwc-gold))] hover:text-white transition-all duration-400 hover:-translate-y-1.5 hover:shadow-gold"
               >
                 Explore All Technical Details
               </Link>
@@ -638,10 +638,10 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Final CTA Section - Luxury Conversion */}
-        <section className="py-28 bg-gradient-to-br from-[hsl(var(--jwc-navy))] via-[hsl(var(--jwc-navy-dark))] to-black text-white relative overflow-hidden">
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[hsl(var(--jwc-gold))] blur-[200px] rounded-full animate-pulse"></div>
+        {/* Final CTA Section - Modern Luxury Conversion */}
+        <section className="py-32 bg-gradient-to-br from-[hsl(var(--jwc-navy))] via-[hsl(var(--jwc-navy-dark))] to-black text-white relative overflow-hidden">
+          <div className="absolute inset-0 opacity-[0.15]">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-[hsl(var(--jwc-gold))] blur-[220px] rounded-full animate-pulse"></div>
           </div>
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px]"></div>
@@ -655,24 +655,24 @@ export default function HomePage() {
                 </span>
               </div>
             </div>
-            <h2 className="mb-6 text-white max-w-3xl mx-auto">Ready to Transform Your Home?</h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] rounded-full mx-auto mb-8"></div>
+            <h2 className="mb-8 text-white max-w-3xl mx-auto">Ready to Transform Your Home?</h2>
+            <div className="w-32 h-1.5 bg-gradient-to-r from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] rounded-full mx-auto mb-10"></div>
             <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">
               Let's start a conversation about bringing more light, comfort, and beauty into your space.
               Request your personalized quote and see how the JWC8500 can elevate your lifestyle.
             </p>
-            <div className="flex flex-wrap gap-6 justify-center mb-12">
+            <div className="flex flex-wrap gap-6 justify-center mb-16">
               <Link
                 href="/quote"
-                className="no-underline group relative bg-gradient-to-r from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] text-[hsl(var(--jwc-navy))] px-12 py-5 rounded-xl font-bold text-lg hover:shadow-gold transition-all duration-300 hover:-translate-y-1 inline-flex items-center gap-3 overflow-hidden"
+                className="no-underline group relative bg-gradient-to-r from-[hsl(var(--jwc-gold))] to-[hsl(var(--jwc-gold-light))] text-[hsl(var(--jwc-navy))] px-14 py-5 rounded-2xl font-bold text-lg hover:shadow-gold transition-all duration-400 hover:-translate-y-1.5 inline-flex items-center gap-3 overflow-hidden"
               >
                 <span className="relative z-10">Get Your Free Quote</span>
-                <ArrowRight size={22} className="relative z-10 group-hover:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <ArrowRight size={22} className="relative z-10 group-hover:translate-x-1.5 transition-transform duration-300" />
+                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-400"></div>
               </Link>
               <Link
                 href="/specifications"
-                className="no-underline bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-12 py-5 rounded-xl font-bold text-lg hover:bg-white/20 hover:border-[hsl(var(--jwc-gold))] transition-all duration-300 hover:-translate-y-1"
+                className="no-underline bg-white/10 backdrop-blur-md border border-white/30 text-white px-14 py-5 rounded-2xl font-bold text-lg hover:bg-white/20 hover:border-[hsl(var(--jwc-gold))] transition-all duration-400 hover:-translate-y-1.5"
               >
                 View Product Details
               </Link>
